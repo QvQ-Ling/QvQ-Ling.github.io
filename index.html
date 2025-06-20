@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>QvQ-Ling</title><meta name="author" content="QvQ-Ling"><meta name="copyright" content="QvQ-Ling"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="QvQ-Ling">
+<meta property="og:url" content="https://www.qvq-ling.online/index.html">
+<meta property="og:site_name" content="QvQ-Ling">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg">
+<meta property="article:author" content="QvQ-Ling">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.qvq-ling.online/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'QvQ-Ling',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-color: #F5F5F5;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/Image_1731390906148.jpg" alt="Logo"><span class="site-name">QvQ-Ling</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">QvQ-Ling</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/uncategorized/hello-world/" title="Hello World"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-20T14:52:06.507Z" title="发表于 2025-06-20 22:52:06">2025-06-20</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/uncategorized/BlogFIx/" title="BlogFix(MAD)"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BlogFix(MAD)"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)">BlogFix(MAD)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></span></div><div class="content">✅ 第一步：检查是否安装 Git打开命令提示符（Win+R 输入 cmd），然后输入以下命令： 12345bash复制编辑git --version  预期结果： 你应该看到类似这样的输出： 12345nginx复制编辑git version 2.39.1.windows.1   🔄 如果出现 &#39;git&#39; 不是内部或外部命令：说明 Git 没有安装，或者没有添加到系统环境变量。请：  下载安装 Git：https://git-scm.com/downloads 安装时选择 将 Git 添加到 PATH（默认勾选） 安装完成后，重新打开终端再试一次 git --version   ✅ 第二步：检查是否安装 hexo-deployer-git 插件在你的 Hexo 项目的根目录（例如 F:\Myblog）打开命令行，输入以下命令： 12345bash复制编辑npm ls hexo-deployer-git  如果显示插件信息（比如版本号），说明已经安装；如果提示 empty 或报错，说明没有安装。  🔧...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盘古石复现"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现">盘古石复现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></span></div><div class="content">手机取证 Mobile Forensics1、分析安卓手机检材，手机的IMSI是？[答案格式：660336842291717] (1分) 1460036641292715   2、养鱼诈骗投资1000，五天后收益是？[答案格式：123] (1分) 1175   3、分析苹果手机检材，手机的IDFA是？[答案格式：E377D1D7-BA02-4A79-BB9A-5C2DE5BD1F17] (2分) 1E477D4C7-BD02-4979-BC9D-5C5DE7BD1F17   4、Telegram应用的卸载时间是？[答案格式：2023-01-22-17:37:50] (2分) 12025-04-17 10:51:39   5、机主hotmail邮箱地址是？[答案格式：123345@hotmail.com] (2分) hostsixer@hotmail.com  6、苹果电脑开机密码是？[答案格式：12345] (4分) 112345678   7、Telegram加密通讯中，加密聊天信息用到的第二个解密载体是？[答案格式：123.zip]...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_74079ed08c50d9d4097a0cd18bf2967c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="取证学习记录"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录">取证学习记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-08T16:00:00.000Z" title="发表于 2025-04-09 00:00:00">2025-04-09</time></span></div><div class="content">1、工具内存取证内存镜像虚拟地址 2023盘古石初赛******根据臧觅风的计算机分析，请给出“\REGISTRY\MACHINE\SYSTEM”在内存镜像中的虚拟地址是多少？****** 盘古石2023初赛*嫌疑人容恨寒苹果电脑执行过多少次查询主机名称命令？*查找命令行历史 ——-&gt;查找用户名（uname ,hostname,hostnametcl)——–&gt;选择计算命令行会话记录 在内存取证中，我们确实会优先考虑会话记录而非传统的命令行历史记录，原因如下：  实时性和动态性 ：内存中的数据是实时的，反映了系统当前的状态和最近的操作，而历史记录可能已经保存到磁盘，可能被篡改或删除。 未保存的命令 ：嫌疑人可能清除了历史记录文件（如~/.bash_history），但内存中的会话记录可能还未被覆盖或清除，从而保留了这些命令的痕迹。 更全面的信息 ：内存不仅包含命令本身，还可能包含相关的过程信息、环境变量和系统调用，这些信息有助于更全面地了解嫌疑人的操作。   一共35次 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945690620.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LCG解题记录"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录">LCG解题记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-18T16:00:00.000Z" title="发表于 2025-03-19 00:00:00">2025-03-19</time></span></div><div class="content">一、LCG加密原理 解密公式  解题记录NSSCTFbabyLCG1234567891011121314151617181920212223242526272829303132333435from Crypto.Util.number import *import gmpy2&#x27;&#x27;&#x27;from secret import flagm = bytes_to_long(flag)bit_len = m.bit_length()a = getPrime(bit_len)b = getPrime(bit_len)p = getPrime(bit_len+1)seed = mresult = []for i in range(10):    seed = (a*seed+b)%p    result.append(seed)print(result)&#x27;&#x27;&#x27;result =...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/uncategorized/Python/" title="python"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_eeecc3f16b9111ef049176a3e534ec78.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/Python/" title="python">python</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-20T16:00:00.000Z" title="发表于 2025-01-21 00:00:00">2025-01-21</time></span></div><div class="content">一、python常用快捷键：ctrl + &#x2F;  添加注释&#x2F;取消注释 ctrl + D 复制粘贴 ctrl + Z 撤销 ctrl + Y 还原&#x2F;删除 shift + enter 无视光标位置直接换行 ctrl + shift + 上下方向键 将代码上下移动一行 ctrl + alt +L 格式化代码 ctrl + shift +I 查看官方的帮助文档 ctrl + shift + f 查找 ctrl + alt + enter 向上换行 shift + tab 去掉缩进 符号\n 换行符 \t 制表符 \‘ 字符串内的引号 1、变量的类型识别变量类型 12type()print(type( ))  明确指定变量类型 1变量名:变量类型 = xxx      2、输入1input(&#x27;xxxxxx&#x27;)  输入的内容默认为str 字符串转换： 3、输出格式化 1234name = &#x27;QVQ&#x27;print(&#x27;My name is %s&#x27; % name)age = 8888print(&#x27;My...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/uncategorized/misc%EF%BC%9F/" title="misc？？"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945678160.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="misc？？"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/misc%EF%BC%9F/" title="misc？？">misc？？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-10T16:00:00.000Z" title="发表于 2024-12-11 00:00:00">2024-12-11</time></span></div><div class="content">部分文件头：PNG:文件头是89 50 4E 47 文件尾是AE 42 60 82 JPEG：文件头是FF D8 FF，文件尾是FF D9 TGA：未压缩的前4字节是00 00 02 00，RLE压缩的前5字节是00 00 10 00 00 GIF：文件头是47 49 46 38 39(37) 61，文件尾是00 3B BMP：文件头是42 4D TIFF：文件头是49 49 2A 00 zip伪加密压缩源文件数据区：50 4B 03 04：这是头文件标记（0x04034b50）14 00：解压文件所需 pkware 版本00 00：全局方式位标记（有无加密） 头文件标记后2bytes08 00：压缩方式5A 7E：最后修改文件时间F7 46：最后修改文件日期16 B5 80 14：CRC-32校验（1480B516）19 00 00 00：压缩后尺寸（25）17 00 00 00：未压缩尺寸（23）07 00：文件名长度00 00：扩展记录长度6B65792E7478740BCECC750E71ABCE48CDC9C95728CECC2DC849AD284DAD0500...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/uncategorized/%E5%AE%9E%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/" title="实用的代码和一些软件"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945661870.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实用的代码和一些软件"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/%E5%AE%9E%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/" title="实用的代码和一些软件">实用的代码和一些软件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-02T16:00:00.000Z" title="发表于 2024-12-03 00:00:00">2024-12-03</time></span></div><div class="content">一、python代码1、读取文件内容12345m = open(&quot;文件位置&quot;,&quot;rb&quot;).read()with oprn(&quot;file position&quot;,&#x27;rb&#x27;)as file:    m = file.read()print(  )  2、替换字符串中指定子字符串1234string.replace(old,new,count)#old --&gt; 想要替换旧子字符串#new --&gt; 替换成新的子字符串#count --&gt; 可选参数，指定替换的最大次数，若没有指定，默认会替换所有出现的old子字符串    二、yafuyafu可用于在RSA中暴力分解n 用法：在yafu文件夹内打开终端1yafu-x64 fator(n/n.txt)  示例：   3、netcat用于打开容器地址 用法：在netcat文件处打开终端输入容器地址12nc 192.168.1.1 80  暴力破解base编码 用法：在basecrack文件目录打开终端1python...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/uncategorized/crypto%E6%8A%A5%E9%94%99%20%E8%A7%A3%E5%86%B3/" title="Crypto解题遇到的报错"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Crypto解题遇到的报错"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/crypto%E6%8A%A5%E9%94%99%20%E8%A7%A3%E5%86%B3/" title="Crypto解题遇到的报错">Crypto解题遇到的报错</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-11-24T16:00:00.000Z" title="发表于 2024-11-25 00:00:00">2024-11-25</time></span></div><div class="content">1.ValueError: Exceeds the limit (4500 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit 这个错误是因为 Python 对于将一个极大整数转换为字符串时设定了一个默认的最大位数限制，通常为 4500 位。当你尝试转换一个位数超过这个限制的整数时，就会抛出这个错误。 解决： 12import syssys.set_int_max_str_digits(设置的字符串位数)  例：ISCTF 七七的欧拉 </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/uncategorized/%E5%8F%A4%E5%85%B8%EF%BC%9F/" title="古典密码？"><img class="post-bg" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="古典密码？"></a></div><div class="recent-post-info"><a class="article-title" href="/uncategorized/%E5%8F%A4%E5%85%B8%EF%BC%9F/" title="古典密码？">古典密码？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-11-19T16:00:00.000Z" title="发表于 2024-11-20 00:00:00">2024-11-20</time></span></div><div class="content">网站集合：中国电码：中文电码查询 - 中文电码转换 - 中文电码对照表 Rabbit：在线Rabbit加密 | Rabbit解密- 在线工具 恺撒：quipqiup - cryptoquip and cryptogram solver MD5：md5在线解密破解,md5解密加密 [会员登录 - 查md5啦cmd5.la] 猪圈：CTF在线工具-在线猪圈密码加密|在线猪圈密码解密|猪圈密码算法|Pigpen Cipher 爆破：quipqiup - cryptoquip and cryptogram solver JSfuck:JSFuck - 在线加解密 维吉尼亚Vigenere Solver | guballa.de oOK[Brainfuck&#x2F;Ook! Obfuscation&#x2F;Encoding splitbrain.org] JJencodeJJEncode编码解码 - 工具匠 XXencodeCTF在线工具-在线XXencode编码|XX编码|XXencode解码|XXencode编码原理|XXencode编码算法 零宽隐写Zero Width...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">QvQ-Ling</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/hello-world/" title="Hello World"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/uncategorized/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-20T14:52:06.507Z" title="发表于 2025-06-20 22:52:06">2025-06-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BlogFix(MAD)"/></a><div class="content"><a class="title" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)">BlogFix(MAD)</a><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盘古石复现"/></a><div class="content"><a class="title" href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现">盘古石复现</a><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_74079ed08c50d9d4097a0cd18bf2967c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="取证学习记录"/></a><div class="content"><a class="title" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录">取证学习记录</a><time datetime="2025-04-08T16:00:00.000Z" title="发表于 2025-04-09 00:00:00">2025-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945690620.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LCG解题记录"/></a><div class="content"><a class="title" href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录">LCG解题记录</a><time datetime="2025-03-18T16:00:00.000Z" title="发表于 2025-03-19 00:00:00">2025-03-19</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/python-%E7%BB%88%E7%AB%AF%E5%90%AF%E7%94%A8%E8%BD%AF%E4%BB%B6/" style="font-size: 1.1em; color: #999">-python -终端启用软件</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/%E5%8F%96%E8%AF%81/" style="font-size: 1.1em; color: #999">-取证</a> <a href="/tags/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81-%E5%93%88%E5%B8%8C/" style="font-size: 1.1em; color: #999">-古典密码 -哈希</a> <a href="/tags/gmpy2/" style="font-size: 1.1em; color: #999">gmpy2</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/06/">
+          <span class="card-archive-list-date">六月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/05/">
+          <span class="card-archive-list-date">五月 2025</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/04/">
+          <span class="card-archive-list-date">四月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/03/">
+          <span class="card-archive-list-date">三月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">4</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-06-20T15:39:13.739Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By QvQ-Ling</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["秋风起，青丝落，曾誓山海盟","春又来，白鬓驳，独乐于世间"])
+  } else {
+    document.getElementById("subtitle").textContent = "秋风起，青丝落，曾誓山海盟"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

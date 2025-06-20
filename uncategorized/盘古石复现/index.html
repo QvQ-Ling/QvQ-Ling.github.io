@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>盘古石复现 | QvQ-Ling</title><meta name="author" content="QvQ-Ling"><meta name="copyright" content="QvQ-Ling"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="手机取证 Mobile Forensics1、分析安卓手机检材，手机的IMSI是？[答案格式：660336842291717] (1分) 1460036641292715   2、养鱼诈骗投资1000，五天后收益是？[答案格式：123] (1分) 1175   3、分析苹果手机检材，手机的IDFA是？[答案格式：E377D1D7-BA02-4A79-BB9A-5C2DE5BD1F17] (2分)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="盘古石复现">
+<meta property="og:url" content="https://www.qvq-ling.online/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/index.html">
+<meta property="og:site_name" content="QvQ-Ling">
+<meta property="og:description" content="手机取证 Mobile Forensics1、分析安卓手机检材，手机的IMSI是？[答案格式：660336842291717] (1分) 1460036641292715   2、养鱼诈骗投资1000，五天后收益是？[答案格式：123] (1分) 1175   3、分析苹果手机检材，手机的IDFA是？[答案格式：E377D1D7-BA02-4A79-BB9A-5C2DE5BD1F17] (2分)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg">
+<meta property="article:published_time" content="2025-05-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-20T11:58:06.000Z">
+<meta property="article:author" content="QvQ-Ling">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.qvq-ling.online/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '盘古石复现',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-color: #F5F5F5;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/Image_1731390906148.jpg" alt="Logo"><span class="site-name">QvQ-Ling</span></a><a class="nav-page-title" href="/"><span class="site-name">盘古石复现</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">盘古石复现</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-20T11:58:06.000Z" title="更新于 2025-05-20 19:58:06">2025-05-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="手机取证-Mobile-Forensics"><a href="#手机取证-Mobile-Forensics" class="headerlink" title="手机取证 Mobile Forensics"></a>手机取证 Mobile Forensics</h2><p>1、分析安卓手机检材，手机的IMSI是？[答案格式：660336842291717] (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">460036641292715</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513011951904.png" alt="image-20250513011951904"></p>
+<p>2、养鱼诈骗投资1000，五天后收益是？[答案格式：123] (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">175</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513012324268.png" alt="image-20250513012324268"></p>
+<p>3、分析苹果手机检材，手机的IDFA是？[答案格式：E377D1D7-BA02-4A79-BB9A-5C2DE5BD1F17] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E477D4C7-BD02-4979-BC9D-5C5DE7BD1F17</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514004908803.png" alt="image-20250514004908803"></p>
+<p>4、Telegram应用的卸载时间是？[答案格式：2023-01-22-17:37:50] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2025-04-17 10:51:39</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514005210392.png" alt="image-20250514005210392"></p>
+<p>5、机主hotmail邮箱地址是？[答案格式：<a href="mailto:&#49;&#x32;&#x33;&#51;&#x34;&#53;&#64;&#x68;&#x6f;&#116;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">123345@hotmail.com</a>] (2分)</p>
+<p><a href="mailto:&#x68;&#111;&#115;&#x74;&#x73;&#105;&#120;&#101;&#x72;&#x40;&#104;&#x6f;&#116;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">hostsixer@hotmail.com</a></p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514005309845.png" alt="image-20250514005309845"></p>
+<p>6、苹果电脑开机密码是？[答案格式：12345] (4分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12345678</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514005736084.png" alt="image-20250514005736084"></p>
+<p>7、Telegram加密通讯中，加密聊天信息用到的第二个解密载体是？[答案格式：123.zip] (4分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.mp4</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514010316615.png" alt="image-20250514010316615"></p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514010254703.png" alt="image-20250514010254703"></p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514010410067.png" alt="image-20250514010410067"></p>
+<p>8、贾韦码的内部代号是？[答案格式：77] (5分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">48</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514010817731.png" alt="image-20250514010817731"></p>
+<p>9、特快专递的收货地址是？[标准格式：老牛市快速路11号ADE公司] (5分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">西红市中山路35号PGS健身房</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514010941891.png" alt="image-20250514010941891"></p>
+<h2 id="APK取证-APK-Forensics"><a href="#APK取证-APK-Forensics" class="headerlink" title="APK取证 APK Forensics"></a>APK取证 APK Forensics</h2><p>1、分析安卓检材，远控工具包名是？[标准格式：com.app.cpp] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.carriez.flutter_hbb</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514011758498.png" alt="image-20250514011758498"></p>
+<p>2、远控工具中继服务器IP是？[标准格式：192.168.11.11] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">59.110.10.229</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514013754980.png" alt="image-20250514013754980"></p>
+<p>3、远控工具ID服务器端口是？[标准格式：8088] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">21116</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514014109810.png" alt="image-20250514014109810"></p>
+<p>4、远控工具中继服务器Key是？[标准格式：HoTwGxUuV9OxSSEWRFsr1DVxQBkbbFRe0ImYMTlzyec&#x3D;] (2分)</p>
+<p>WIUqzRq1Ocx4QNnsF26dZQijKdyd2L9OfaT55hDlQCI&#x3D;  （同2.）</p>
+<p>5、远控工具中收藏的远程ID是？[标准格式：123456] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1807892422？？？</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514014345018.png" alt="image-20250514014345018"></p>
+<p>6、远程控制该手机的手机型号是？[标准格式：huawei-Hot] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google-Pixel</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514014518031.png" alt="image-20250514014518031"></p>
+<p>7、监听工具包名是？[标准格式：com.app.cpp] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.example.liekai</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514014710770.png" alt="image-20250514014710770"></p>
+<p>8、监听工具代码主入口是？[标准格式：com.app.cpp.MainActidddy] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.example.liekai.MainActivity</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514014801951.png" alt="image-20250514014801951"></p>
+<p>9、监听工具的签名算法是？[标准格式：AES123RSA ] (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHA256-RSA</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514014855123.png" alt="image-20250514014855123"></p>
+<p>10、监听工具运行多少秒后会跳转成黑色幕布？[标准格式：3.000] (3分)</p>
+<p>11、监听工具运行后，黑色幕布上字符串是？[标准格式：aes取证平台] (4分)<br>12、监听工具检测到多少分贝开始录音？[标准格式：30] (4分)</p>
+<p>70</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514020257084.png" alt="image-20250514020257084"></p>
+<p>13、监听工具录音连续几秒没有检测到声音停止录音？[标准格式：3] (4分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<p>14、监听工具保存文件存储路径的数据库名称是？[标准格式：sqlite.db] (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">recordings.db</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514020515546.png" alt="image-20250514020515546"></p>
+<p>15、监听工具保存录像文件的文件夹是？[标准格式：file] (4分)</p>
+<p>16、监听工具数据库中保存音视频文件的路径使用什么加密？[标准格式：Rsa] (5分)<br>17、录音的文件采用什么加密方式？[标准格式：RC4-123] (5分)<br>18、录像文件加密秘钥的最后一位是？[标准格式：0x6A] (5分)<br>19、原始文件md5为3b4d55ae的创建时间是？[标准格式：2024-2-14-16:32:8] (5分)</p>
+<h2 id="计算机取证-Computer-Forensics"><a href="#计算机取证-Computer-Forensics" class="headerlink" title="计算机取证 Computer Forensics"></a>计算机取证 Computer Forensics</h2><p>1、分析贾韦码计算机检材，计算机系统Build版本为？【标准格式：19000】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">18362</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513012548702.png" alt="image-20250513012548702"></p>
+<p>2、计算机最后一次正常关机的时间为？UTC +0【标准格式：2025-05-06 09:00:00】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2025-04-18 11:20:54</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513012606278.png" alt="image-20250513012606278"></p>
+<p>3、计算机网卡的MAC地址为？【标准格式：00-0B-00-A0-00-00】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00-0C-29-0F-69-00</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513012732164.png" alt="image-20250513012732164"></p>
+<p>4、计算机用户“贾韦码” 安全标识符SID为？【标准格式：S-X-X-X-X-X-X-X】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">S-1-5-21-3733482367-3411043098-2536183883-1001</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513013017232.png" alt="image-20250513013017232"></p>
+<p>5、计算机默认浏览器为？【标准格式：Mozilla Firefox】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Google Chrome</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513013057120.png" alt="image-20250513013057120"></p>
+<p>6、计算机默认浏览器版本为？【标准格式：000.0.0000.00】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">135.0.7049.96</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513013200157.png" alt="image-20250513013200157"></p>
+<p>7、机主通过浏览器搜索国外社交软件为？【标准格式：Whatsapp】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">telegram</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513014239619.png" alt="image-20250513014239619"></p>
+<p>8、机主的邮箱账号为？【标准格式：<a href="mailto:&#x70;&#103;&#115;&#99;&#x75;&#112;&#64;&#x70;&#x67;&#115;&#46;&#99;&#111;&#109;">pgscup@pgs.com</a>】 (3分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tqmdavidjohnson300@gmail.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513013323036.png" alt="image-20250513013323036"></p>
+<p>9、计算机装过一款反取证软件为？【标准格式：EnCrypt.exe】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VeraCrypt.exe</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513013522878.png" alt="image-20250513013522878"></p>
+<p>10、计算机通过Xshell远程连接的ip地址为？【标准格式：127.0.0.1】 (1分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.56.129</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513013612845.png" alt="image-20250513013612845"></p>
+<p>11、机主曾买过一个美国的TG账号，请给该账号的原两步验证密码？【标准格式：8位数字】 (2分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13770603</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250513013904857.png" alt="image-20250513013904857"></p>
+<p>12、给出其电脑内加密容器的解密密码？【标准格式：Abc@123】 (5分)</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250520192728599.png" alt="image-20250520192728599"></p>
+<p>？？？？这文件怎么找……</p>
+<p>导出来Passware Kit爆破一下（CPU太垃圾了太慢了）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pgs8521d3j</span><br></pre></td></tr></table></figure>
+
+<p>13、给出其电脑内加密容器挂载的盘符？【标准格式：C】 (3分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250514021825674.png" alt="image-20250514021825674"></p>
+<p>14、给出其电脑内存放了多少张伪造身份证？【标准格式：10】 (4分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1023</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250520195242688.png" alt="image-20250520195242688"></p>
+<p>15、找出任敏的身份证编号？【标准格式：18位】 (4分)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">430529195112085460</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250520195350478.png" alt="image-20250520195350478"></p>
+<p>16、找出其电脑内存放的密钥文件，计算其MD5?【标准格式：字母小写】 (5分)</p>
+<p>17、找出其电脑内存放的密钥文件，解密此密钥文件，给出其内容？【标准格式：第3届pgscup】 (5分)<br>18、对macOS系统进行解析，登陆的电子邮件服务是谁提供的？【标准格式:pgscup】 (1分)<br>19、系统备忘录的包名是什么？【标准格式:com.dfefef.note】 (2分)<br>20、图片中隐藏的内容是什么？【标准格式：隐藏内容 厨子戏子痞子】 (4分)<br>21、被加密文件的扩展名是什么？【标准格式：123】 (1分)<br>22、被加密的文件总共有几个？【标准格式：5】 (5分)<br>23、贾韦码家使用的智能门锁品牌型号是什么？【标准格式：小米X号】<br>What is the brand and model of the smart lock used in Jia Wei Ma(贾韦码)’s home? [Answer example: 小米X号] (5分)</p>
+<h2 id="EXE取证-PE-Binary-Forensics"><a href="#EXE取证-PE-Binary-Forensics" class="headerlink" title="EXE取证 PE Binary Forensics"></a>EXE取证 PE Binary Forensics</h2><p>1、分析Windows木马，其控制端ip是？[标准格式：192.168.1.11] (2分)<br>2、软件会复制自身到哪个文件夹下？[标准格式：DaTa] (2分)<br>3、接上题，复制后软件名称是？[标准格式：AppTmp.exe] (3分)<br>4、软件一共可以窃取多少种浏览器的信息？[标准格式：3] (4分)<br>5、软件查询安装的杀毒软件出错或异常会返回什么字符串？[标准格式：Apps] (3分)</p>
+<h2 id="苹果应用取证-macOS-Apps-Forensics"><a href="#苹果应用取证-macOS-Apps-Forensics" class="headerlink" title="苹果应用取证 macOS Apps Forensics"></a>苹果应用取证 macOS Apps Forensics</h2><p>1、对mac电脑中的加密程序进行分析，使用了一个特定的数作为密钥生成的种子，请问这个数是什么？【标准格式：1234】 (4分)<br>2、分析文件头部元素并确定它们的正确顺序。将字段名称按顺序连接并提交？【标准格式：字段1_字段2_字段3…】 (5分)<br>3、密钥派生过程中使用了几个算法步骤。其中一个函数使用了与其实际功能不符的名称。找出这个函数名并提交？【标准格式：函数名】 (5分)<br>4、程序中实现了一个故意减慢加密过程的机制，延迟值是多少？【标准格式：1.1】 (5分)<br>5、程序中隐藏了一个版本标识符，请找出版本号？【标准格式：v1.1.1】 (5分)</p>
+<h2 id="服务器取证-Server-Forensics"><a href="#服务器取证-Server-Forensics" class="headerlink" title="服务器取证 Server Forensics"></a>服务器取证 Server Forensics</h2><p>1、分析服务器检材，找出服务器系统启动盘的GUID？【标准格式:数字、字母、-的组合，字母大写】 (1分)<br>2、找出服务器网关IP？【标准格式:1.1.1.1】 (1分)<br>3、找出服务器数据盘的文件系统格式？【标准格式:ntfs】 (1分)<br>4、找出服务器数据盘的解密密钥文件名？【标准格式:abcd】 (1分)<br>5、找出服务器密码？【标准格式：key@123】 (3分)<br>6、找出服务器版本号？【标准格式：0.0.0】 (1分)<br>7、找出服务器内Docker虚拟硬盘位置？【标准格式：&#x2F;home&#x2F;abc&#x2F;adc.raw】 (2分)<br>8、找出服务器启动盘的启动标识？【标准格式：D100，写出型号即可】 (3分)<br>9、找出服务器内共有多少个容器镜像？【标准格式：10】 (2分)<br>10、找出服务器内网站服务器所用数据库运行的容器名？【标准格式：abc-abc-1】 (3分)<br>11、找出服务器内虚拟币容器对外暴露的端口号？【标准格式：8000】 (3分)<br>12、找出投资理财网站的域名？【标准格式：3w.baidu.com】 (3分)<br>13、找出投资理财网站内连接数据库的密码？【标准格式：password】 (3分)<br>14、找出投资理财网站后台访问地址？【标准格式：<a target="_blank" rel="noopener" href="http://www.baidu.com/login.html%E3%80%91">http://www.baidu.com/login.html】</a> (4分)<br>15、找出投资理财网站会员等级设置存放在那个数据库表内？【标准格式：user】 (3分)<br>16、找出投资理财网站提现成功的金额？【标准格式：10000】 (4分)<br>17、找出投资理财网站内用户王欣的银行卡号？【标准格式：16位数字】 (4分)<br>18、找出投资理财网站用户的最低提现金额？【标准格式：10000】 (5分)<br>19、给出存放投资理财用户表内clock为0表示用户处于那种状态？【标准格式：核实】 (5分)<br>20、找出投资理财网站内通过支付宝支付充值状态为未支付的金额？【标准格式：10000】 (5分)<br>21、对贾韦码计算机进行分析，账本系统使用的web框架是什么？【标准格式:Django】 (2分)<br>22、对账本系统进行分析，账本使用的数据库版本是多少？【标准格式:1.1.1】 (1分)<br>23、对账本系统进行分析，使用的数据库名称是？【标准格式：test】 (2分)<br>24、对账本系统进行分析，用户手机号码在数据库中的加密方法是？【标准格式：xor-325-dfg】 (4分)<br>25、分析<code>crypto.js</code>中的<code>_0x3ad7</code>函数，找出返回加密数据的编码格式？【标准格式：ascii】 (5分)<br>26、分析<code>crypto.js</code>中的<code>_0x3ad7</code>函数，找出使用异常作为控制流的触发语句？【标准格式：Test:connec】 (5分)<br>27、分析keyManager.js<code>中</code>initializeKeys&#96;函数的密钥获取优先级是什么？【标准格式：我是谁&gt;我是谁&gt;我是谁】 (5分)<br>28、对账本系统进行分析，账本记录的用户总数是多少？【标准格式：1234】 (5分)<br>29、对账本系统进行分析，身份证号“430014197812200986”用户的投资金额是多少？【标准格式：111111】 (5分)<br>30、对账本系统进行分析，姓名为明凤英的客户共有几人？【标准格式：1】 (3分)</p>
+<h2 id="物联网取证-IOT-Forensics"><a href="#物联网取证-IOT-Forensics" class="headerlink" title="物联网取证 IOT Forensics"></a>物联网取证 IOT Forensics</h2><p>1、分析冰箱，请问智能冰箱的品牌？【标准格式:xiaomi】 (2分)<br>2、请问智能冰箱的型号？【标准格式:MiFridge2024】 (1分)<br>3、请找智能冰箱的uuid？【标准格式：34567890-12cd-efab-3456-789012cdefab】 (4分)<br>4、请问智能冰箱默认保存几张图片？【标准格式：1】 (5分)<br>5、请问冰箱中已存的第一张图片上的内容是什么？【标准格式：满城尽带黄金甲】 (4分)<br>6、请问冰箱中已存的第二张图片的名称是什么？【标准格式：123.jpg】 (4分)<br>7、请找冰箱中隐藏的内容？【标准格式：chuzixizipizi】 (5分)<br>8、请找出冰箱中嫌疑人图片MD5值的后六位？【标准格式：1a2b3d】 (5分)<br>9、请找出冰箱最后一次开门时间？【标准格式：10:11】 (5分)<br>10、默认图片的存储限制大小是多少？【标准格式：1KB】 (5分)<br>11、分析video.E01，被修改的录像md5前5位是？【标准格式：1a2b3】 (4分)</p>
+<h2 id="数据分析-Data-Analysis"><a href="#数据分析-Data-Analysis" class="headerlink" title="数据分析 Data Analysis"></a>数据分析 Data Analysis</h2><p>1、对贾韦码计算机检材进行解析，该诈骗集团的最高层领导者的id 和姓名？【标准格式:M000001 姓名】 (1分)<br>2、找出最高领导的所有下线中提现总额最高的成员ID？【标准格式:M0000001】 (4分)<br>3、找出从直接下线获得平均佣金最高的成员ID及其平均佣金金额？【标准格式：M0000001,123.12】 (4分)<br>4、找出注册时间最早的前 10% 成员中，交易次数最少的 5 位成员的 id？【标准格式：M000001,M000002,M000003,M000004,M000005】 (4分)<br>5、找出交易次数增长率最高的成员ID及其增长率？【标准格式：M000001,24.44%】 (4分)<br>6、统计状态 ‘active’、90天无交易、历史交易额前20%的成员数？【标准格式：111】 (5分)<br>7、找出有上线且直接下线最多的成员ID及下线数？【标准格式：M000001:数量】 (5分)<br>8、比较最早年份Q1与Q4注册成员的总交易额，指出哪个更高及具体金额？【标准格式：Q1:123.12】 (5分)<br>9、找出成员地址中最常出现的省份，并计算居住在该省份的所有成员的总提现金额？【标准格式：省份,123.12】 (5分)<br>10、计算最高层领导者的净资金流？【标准格式：123.12】 (5分)</p>
+<h3 id="时间节点记录"><a href="#时间节点记录" class="headerlink" title="时间节点记录"></a>时间节点记录</h3><p>24：27.16—– 手机前两题+加计算机1-11+13</p>
+<p>23：22—–手机3-9</p>
+<p>54：21—–APK1-9 12-14</p>
+<p>30：40 计算机12，14，15</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.qvq-ling.online">QvQ-Ling</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.qvq-ling.online/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/">https://www.qvq-ling.online/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.qvq-ling.online" target="_blank">QvQ-Ling</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)"><img class="cover" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">BlogFix(MAD)</div></div><div class="info-2"><div class="info-item-1">✅ 第一步：检查是否安装 Git打开命令提示符（Win+R 输入 cmd），然后输入以下命令： 12345bash复制编辑git --version  预期结果： 你应该看到类似这样的输出： 12345nginx复制编辑git version 2.39.1.windows.1   🔄 如果出现 &#39;git&#39; 不是内部或外部命令：说明 Git 没有安装，或者没有添加到系统环境变量。请：  下载安装 Git：https://git-scm.com/downloads 安装时选择 将 Git 添加到 PATH（默认勾选） 安装完成后，重新打开终端再试一次 git --version   ✅ 第二步：检查是否安装 hexo-deployer-git 插件在你的 Hexo 项目的根目录（例如 F:\Myblog）打开命令行，输入以下命令： 12345bash复制编辑npm ls hexo-deployer-git  如果显示插件信息（比如版本号），说明已经安装；如果提示 empty 或报错，说明没有安装。  🔧...</div></div></div></a><a class="pagination-related" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录"><img class="cover" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_74079ed08c50d9d4097a0cd18bf2967c.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">取证学习记录</div></div><div class="info-2"><div class="info-item-1">1、工具内存取证内存镜像虚拟地址 2023盘古石初赛******根据臧觅风的计算机分析，请给出“\REGISTRY\MACHINE\SYSTEM”在内存镜像中的虚拟地址是多少？****** 盘古石2023初赛*嫌疑人容恨寒苹果电脑执行过多少次查询主机名称命令？*查找命令行历史 ——-&gt;查找用户名（uname ,hostname,hostnametcl)——–&gt;选择计算命令行会话记录 在内存取证中，我们确实会优先考虑会话记录而非传统的命令行历史记录，原因如下：  实时性和动态性 ：内存中的数据是实时的，反映了系统当前的状态和最近的操作，而历史记录可能已经保存到磁盘，可能被篡改或删除。 未保存的命令 ：嫌疑人可能清除了历史记录文件（如~/.bash_history），但内存中的会话记录可能还未被覆盖或清除，从而保留了这些命令的痕迹。 更全面的信息 ：内存不仅包含命令本身，还可能包含相关的过程信息、环境变量和系统调用，这些信息有助于更全面地了解嫌疑人的操作。   一共35次 </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">QvQ-Ling</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%96%E8%AF%81-Mobile-Forensics"><span class="toc-number">1.</span> <span class="toc-text">手机取证 Mobile Forensics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#APK%E5%8F%96%E8%AF%81-APK-Forensics"><span class="toc-number">2.</span> <span class="toc-text">APK取证 APK Forensics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%96%E8%AF%81-Computer-Forensics"><span class="toc-number">3.</span> <span class="toc-text">计算机取证 Computer Forensics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EXE%E5%8F%96%E8%AF%81-PE-Binary-Forensics"><span class="toc-number">4.</span> <span class="toc-text">EXE取证 PE Binary Forensics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8B%B9%E6%9E%9C%E5%BA%94%E7%94%A8%E5%8F%96%E8%AF%81-macOS-Apps-Forensics"><span class="toc-number">5.</span> <span class="toc-text">苹果应用取证 macOS Apps Forensics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%96%E8%AF%81-Server-Forensics"><span class="toc-number">6.</span> <span class="toc-text">服务器取证 Server Forensics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E8%81%94%E7%BD%91%E5%8F%96%E8%AF%81-IOT-Forensics"><span class="toc-number">7.</span> <span class="toc-text">物联网取证 IOT Forensics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-Data-Analysis"><span class="toc-number">8.</span> <span class="toc-text">数据分析 Data Analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E8%8A%82%E7%82%B9%E8%AE%B0%E5%BD%95"><span class="toc-number">8.1.</span> <span class="toc-text">时间节点记录</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/hello-world/" title="Hello World"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/uncategorized/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-20T14:52:06.507Z" title="发表于 2025-06-20 22:52:06">2025-06-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BlogFix(MAD)"/></a><div class="content"><a class="title" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)">BlogFix(MAD)</a><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盘古石复现"/></a><div class="content"><a class="title" href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现">盘古石复现</a><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_74079ed08c50d9d4097a0cd18bf2967c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="取证学习记录"/></a><div class="content"><a class="title" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录">取证学习记录</a><time datetime="2025-04-08T16:00:00.000Z" title="发表于 2025-04-09 00:00:00">2025-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945690620.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LCG解题记录"/></a><div class="content"><a class="title" href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录">LCG解题记录</a><time datetime="2025-03-18T16:00:00.000Z" title="发表于 2025-03-19 00:00:00">2025-03-19</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By QvQ-Ling</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'RAF5WiARHber2ob8Mp5cCIjM-MdYXbMMI',
+      appKey: 'SlcDkXmqL4H9LPaBJlQoAYwO',
+      avatar: 'monsterid',
+      serverURLs: 'https://www.qvq-ling.online',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

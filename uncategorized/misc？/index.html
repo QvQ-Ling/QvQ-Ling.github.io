@@ -1,0 +1,535 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>misc？？ | QvQ-Ling</title><meta name="author" content="QvQ-Ling"><meta name="copyright" content="QvQ-Ling"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="部分文件头：PNG:文件头是89 50 4E 47 文件尾是AE 42 60 82 JPEG：文件头是FF D8 FF，文件尾是FF D9 TGA：未压缩的前4字节是00 00 02 00，RLE压缩的前5字节是00 00 10 00 00 GIF：文件头是47 49 46 38 39(37) 61，文件尾是00 3B BMP：文件头是42 4D TIFF：文件头是49 49 2A 00 zip伪">
+<meta property="og:type" content="article">
+<meta property="og:title" content="misc？？">
+<meta property="og:url" content="https://www.qvq-ling.online/uncategorized/misc%EF%BC%9F/index.html">
+<meta property="og:site_name" content="QvQ-Ling">
+<meta property="og:description" content="部分文件头：PNG:文件头是89 50 4E 47 文件尾是AE 42 60 82 JPEG：文件头是FF D8 FF，文件尾是FF D9 TGA：未压缩的前4字节是00 00 02 00，RLE压缩的前5字节是00 00 10 00 00 GIF：文件头是47 49 46 38 39(37) 61，文件尾是00 3B BMP：文件头是42 4D TIFF：文件头是49 49 2A 00 zip伪">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945678160.jpg">
+<meta property="article:published_time" content="2024-12-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-17T12:10:22.000Z">
+<meta property="article:author" content="QvQ-Ling">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945678160.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.qvq-ling.online/uncategorized/misc%EF%BC%9F/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'misc？？',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-color: #F5F5F5;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945678160.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/Image_1731390906148.jpg" alt="Logo"><span class="site-name">QvQ-Ling</span></a><a class="nav-page-title" href="/"><span class="site-name">misc？？</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">misc？？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-10T16:00:00.000Z" title="发表于 2024-12-11 00:00:00">2024-12-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-17T12:10:22.000Z" title="更新于 2025-05-17 20:10:22">2025-05-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="部分文件头："><a href="#部分文件头：" class="headerlink" title="部分文件头："></a>部分文件头：</h1><h3 id="PNG"><a href="#PNG" class="headerlink" title="PNG:"></a>PNG:</h3><p>文件头是89 50 4E 47</p>
+<p>文件尾是AE 42 60 82</p>
+<h3 id="JPEG："><a href="#JPEG：" class="headerlink" title="JPEG："></a>JPEG：</h3><p>文件头是FF D8 FF，文件尾是FF D9</p>
+<h3 id="TGA："><a href="#TGA：" class="headerlink" title="TGA："></a>TGA：</h3><p>未压缩的前4字节是00 00 02 00，RLE压缩的前5字节是00 00 10 00 00</p>
+<h3 id="GIF："><a href="#GIF：" class="headerlink" title="GIF："></a>GIF：</h3><p>文件头是47 49 46 38 39(37) 61，文件尾是00 3B</p>
+<h3 id="BMP："><a href="#BMP：" class="headerlink" title="BMP："></a>BMP：</h3><p>文件头是42 4D</p>
+<h3 id="TIFF："><a href="#TIFF：" class="headerlink" title="TIFF："></a>TIFF：</h3><p>文件头是49 49 2A 00</p>
+<h1 id="zip伪加密"><a href="#zip伪加密" class="headerlink" title="zip伪加密"></a>zip伪加密</h1><h3 id="压缩源文件数据区："><a href="#压缩源文件数据区：" class="headerlink" title="压缩源文件数据区："></a><strong>压缩源文件数据区：</strong></h3><p>50 4B 03 04：这是头文件标记（0x04034b50）<br>14 00：解压文件所需 pkware 版本<br>00 00：全局方式位标记（有无加密） 头文件标记后2bytes<br>08 00：压缩方式<br>5A 7E：最后修改文件时间<br>F7 46：最后修改文件日期<br>16 B5 80 14：CRC-32校验（1480B516）<br>19 00 00 00：压缩后尺寸（25）<br>17 00 00 00：未压缩尺寸（23）<br>07 00：文件名长度<br>00 00：扩展记录长度<br>6B65792E7478740BCECC750E71ABCE48CDC9C95728CECC2DC849AD284DAD0500 </p>
+<h3 id="压缩源文件目录区："><a href="#压缩源文件目录区：" class="headerlink" title="压缩源文件目录区："></a><strong>压缩源文件目录区：</strong></h3><p>50 4B 01 02：目录中文件文件头标记(0x02014b50) </p>
+<p>3F 00：压缩使用的 pkware 版本</p>
+<p>14 00：解压文件所需 pkware 版本<br>00 00：全局方式位标记（有无加密，伪加密的关键） 目录文件标记后4bytes<br>08 00：压缩方式<br>5A 7E：最后修改文件时间<br>F7 46：最后修改文件日期<br>16 B5 80 14：CRC-32校验（1480B516）<br>19 00 00 00：压缩后尺寸（25）<br>17 00 00 00：未压缩尺寸（23）<br>07 00：文件名长度<br>24 00：扩展字段长度<br>00 00：文件注释长度<br>00 00：磁盘开始号<br>00 00：内部文件属性<br>20 00 00 00：外部文件属性 </p>
+<p>00 00 00 00：局部头部偏移量</p>
+<h3 id="压缩源文件目录结束标志："><a href="#压缩源文件目录结束标志：" class="headerlink" title="压缩源文件目录结束标志："></a><strong>压缩源文件目录结束标志：</strong></h3><p>50 4B 05 06：目录结束标记<br>00 00：当前磁盘编号<br>00 00：目录区开始磁盘编号<br>01 00：本磁盘上纪录总数<br>01 00：目录区中纪录总数<br>59 00 00 00：目录区尺寸大小 </p>
+<p>3E 00 00 00：目录区对第一张磁盘的偏移量</p>
+<p>00 00：ZIP 文件注释长度</p>
+<h1 id="wireshark检索词"><a href="#wireshark检索词" class="headerlink" title="wireshark检索词"></a>wireshark检索词</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="1-BUUCTF-ACTF-RSA0"><a href="#1-BUUCTF-ACTF-RSA0" class="headerlink" title="[1]BUUCTF ACTF RSA0"></a>[1]BUUCTF ACTF RSA0</h3><p>用010editor打开zip文件，全局防伪标记为00 00，将文件中的所有09 00改成00 00 </p>
+<p>打开py文件，输出对应output文件中的内容，进行常规rsa解密</p>
+<h3 id="2-BUUCTF-zip伪加密"><a href="#2-BUUCTF-zip伪加密" class="headerlink" title="[2]BUUCTF zip伪加密"></a>[2]BUUCTF zip伪加密</h3><p>一、无加密</p>
+<p>压缩源文件数据区的全局方式位标记应当为00 00 （50 4B 03 04 14 00 后）</p>
+<p>且压缩源文件目录区的全局方式位标记应当为00 00 （50 4B 01 02 14 00 后）</p>
+<p>二、伪加密</p>
+<p>压缩源文件数据区的全局方式位标记应当为 00 00 （50 4B 03 04 14 00 后）</p>
+<p>且压缩源文件目录区的全局方式位标记应当为 09 00 （50 4B 01 02 14 00 后）</p>
+<p>三、真加密</p>
+<p>压缩源文件数据区的全局方式位标记应当为09 00 （50 4B 03 04 14 00 后）</p>
+<p>且压缩源文件目录区的全局方式位标记应当为09 00 （50 4B 01 02 14 00 后）</p>
+<p>第二个数字为奇数时有加密，偶数无加密</p>
+<h2 id="LSB"><a href="#LSB" class="headerlink" title="LSB"></a>LSB</h2><h3 id="1-BUUCTF-LSB"><a href="#1-BUUCTF-LSB" class="headerlink" title="[1]BUUCTF LSB"></a>[1]BUUCTF LSB</h3><p>根据题目提示可以用sagesolve</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/Screenshot%202025-03-27%20232511.png" alt="Screenshot 2025-03-27 232511"></p>
+<p>点击savebin 保存为filename.png 获得二维码即为flag</p>
+<h2 id="？？未知"><a href="#？？未知" class="headerlink" title="？？未知"></a>？？未知</h2><p>binwalk扫描出zip</p>
+<p>foremost生成output文件爆破zip得flag</p>
+<p>serpent 解码:<a target="_blank" rel="noopener" href="http://serpent.online-domain-tools.com/">http://serpent.online-domain-tools.com/</a></p>
+<h3 id="例题BUUCTFsnake"><a href="#例题BUUCTFsnake" class="headerlink" title="例题BUUCTFsnake"></a>例题BUUCTFsnake</h3><p>exp:压缩包解密出来获得提示：What is Nicki Minaj<br>What is Nicki Minaj’s favorite song that refers to snakes?</p>
+<p>纸箱nicki minaj这个歌手  和snake有关的歌名为anaconda  将其作为key 放入网站解码获得flag</p>
+<h1 id="base64伪加密"><a href="#base64伪加密" class="headerlink" title="base64伪加密"></a>base64伪加密</h1><h3 id="解密脚本-大佬的"><a href="#解密脚本-大佬的" class="headerlink" title="解密脚本(大佬的)"></a>解密脚本(大佬的)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">base64value</span>(<span class="params">c</span>):</span><br><span class="line">    table = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">64</span>):</span><br><span class="line">        <span class="keyword">if</span> table[i] == c:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>    </span><br><span class="line">        </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">base64stego</span>():</span><br><span class="line">    f = <span class="built_in">open</span>(<span class="string">&quot;fileposition&quot;</span>,<span class="string">&quot;rb&quot;</span>)</span><br><span class="line">    lines = f.readlines()</span><br><span class="line">    x = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">        l = <span class="built_in">str</span>(line, encoding = <span class="string">&quot;utf-8&quot;</span>).strip()</span><br><span class="line">        <span class="keyword">if</span> l[-<span class="number">1</span>] == <span class="string">&#x27;=&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> l[-<span class="number">2</span>] == <span class="string">&#x27;=&#x27;</span>:</span><br><span class="line">                x += <span class="built_in">bin</span>(base64value(l[-<span class="number">3</span>]))[-<span class="number">4</span>:]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                x += <span class="built_in">bin</span>(base64value(l[-<span class="number">2</span>]))[-<span class="number">2</span>:]</span><br><span class="line">    </span><br><span class="line">    flag = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(x), <span class="number">8</span>):</span><br><span class="line">        flag += <span class="built_in">chr</span>(<span class="built_in">int</span>(x[i:i+<span class="number">8</span>],<span class="number">2</span>))</span><br><span class="line">    <span class="built_in">print</span>(flag)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    base64stego()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件隐写"><a href="#文件隐写" class="headerlink" title="文件隐写"></a>文件隐写</h2><h3 id="BUUCTF-outguess"><a href="#BUUCTF-outguess" class="headerlink" title="BUUCTF outguess"></a>BUUCTF outguess</h3><p>在kali中使用exiftool打开mmm.jpg会发现社会主义核心价值观加密，解密后得到abc，猜测为outguess的key</p>
+<p>在kali中打开outguess</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outguess -k <span class="string">&#x27;abc&#x27;</span> -r mmm.jpg flag.txt</span><br></pre></td></tr></table></figure>
+
+<p>后再次打开flag.txt获得flag</p>
+<h3 id="NSSCTFhuaji？"><a href="#NSSCTFhuaji？" class="headerlink" title="NSSCTFhuaji？"></a>NSSCTFhuaji？</h3><p>kali binwalk扫描发现压缩包，内flag.txt无内容，继续从图片中找线索 在exiftool查看发现一串数字用16进制转ASCII结果为压缩包密码</p>
+<p>输入后获得flag</p>
+<h3 id="2-excel破解"><a href="#2-excel破解" class="headerlink" title="[2]excel破解"></a>[2]excel破解</h3><p>获得的excel表格带有密码  直接用记事本打开查找flag</p>
+<h2 id="exe-base64转图片"><a href="#exe-base64转图片" class="headerlink" title="exe??base64转图片"></a>exe??base64转图片</h2><h3 id="n种解决方法"><a href="#n种解决方法" class="headerlink" title="n种解决方法"></a>n种解决方法</h3><p>010editor打开KEY.exe发现base64编码，截取第一段进行解密发现PNG的字样</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-03-29%20201626.png" alt="屏幕截图 2025-03-29 201626"></p>
+<p>将完整编码复制到随波逐流<img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202025-03-29%2520201705.png" alt="屏幕截图 2025-03-29 201705"></p>
+<p>密钥处输入png，base64转图片，扫描二维码</p>
+<h5 id="整合文件"><a href="#整合文件" class="headerlink" title="整合文件"></a>整合文件</h5><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">copy</span> /b filepath + filepath &gt; filepath</span><br></pre></td></tr></table></figure>
+
+<h2 id="ISCC-书法大师"><a href="#ISCC-书法大师" class="headerlink" title="ISCC 书法大师"></a>ISCC 书法大师</h2><p>图片foremost提取出zip</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250502130435416.png" alt="image-20250502130435416"></p>
+<p>扫描图片查看exif信息</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250502130636964.png" alt="image-20250502130636964"></p>
+<p>xp comment是压缩包解压密码</p>
+<p>解压之后文本文档将文字转为笔画数</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250502130802405.png" alt="image-20250502130802405"></p>
+<p>笔画转为16进制</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250502130835239.png" alt="image-20250502130835239"></p>
+<p><img src="C:\Users\38608\AppData\Roaming\Typora\typora-user-images\image-20250502130852051.png" alt="image-20250502130852051"></p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20250502130927717.png" alt="image-20250502130927717"></p>
+<h2 id="ZIP明文攻击"><a href="#ZIP明文攻击" class="headerlink" title="ZIP明文攻击"></a>ZIP明文攻击</h2><p>这个问题问得非常好！它涉及了 <code>bkcrack</code> 使用的<strong>ZIP传统加密算法漏洞原理</strong>，以及为何**只凭 <code>flag.zip</code> 的尾部（已知明文）**就能破解出整个 <code>flag.zip</code> 的加密密钥，进而解密 <code>attachment.zip</code> 中的加密内容。</p>
+<p>下面我分步骤解释这个原理。</p>
+<hr>
+<h3 id="🔐-一、ZIP-的传统加密机制存在严重弱点"><a href="#🔐-一、ZIP-的传统加密机制存在严重弱点" class="headerlink" title="🔐 一、ZIP 的传统加密机制存在严重弱点"></a>🔐 一、ZIP 的传统加密机制存在严重弱点</h3><p>ZIP 文件有两种加密方式，其中一种是所谓的“传统 PKZIP 加密”（也叫 ZIP legacy encryption），其核心特点是：</p>
+<ul>
+<li>使用一个 96 位（3 个 32-bit）内部密钥 (key X, Y, Z)</li>
+<li>加密过程是<strong>流加密（stream cipher）</strong>，每个字节的加密只与密钥有关</li>
+</ul>
+<p>⚠️ 问题是：<strong>这个加密方式的密钥初始化和加密逻辑存在严重漏洞</strong>。在 1994 年，Biham 和 Kocher 发表了一种<strong>已知明文攻击（Known Plaintext Attack）</strong>，可以在已知少量明文的情况下推导出全部密钥。</p>
+<hr>
+<h3 id="🔍-二、已知明文攻击的核心思路"><a href="#🔍-二、已知明文攻击的核心思路" class="headerlink" title="🔍 二、已知明文攻击的核心思路"></a>🔍 二、已知明文攻击的核心思路</h3><p><strong>已知明文攻击（KPA）原理：</strong></p>
+<ul>
+<li>如果你知道加密文件中<strong>某一段明文的确切位置和内容</strong>，你就能：<ol>
+<li>从密文和明文对比推出<strong>部分密钥状态</strong></li>
+<li>根据 ZIP 加密算法的规律<strong>反推出完整密钥</strong></li>
+<li>用这个密钥解密整个 ZIP 文件</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="🧩-三、为什么用-ZIP-文件尾部就够？"><a href="#🧩-三、为什么用-ZIP-文件尾部就够？" class="headerlink" title="🧩 三、为什么用 ZIP 文件尾部就够？"></a>🧩 三、为什么用 ZIP 文件尾部就够？</h3><p>ZIP 文件末尾有个固定的结构，叫 <strong>End of Central Directory Record (EOCD)</strong>，长度是 22 字节，内容是<strong>固定格式</strong>（大多数压缩软件写出来都一样）。</p>
+<p>所以：</p>
+<ul>
+<li>你知道 <code>flag.zip</code> 是一个 ZIP 文件；</li>
+<li>那么你就能<strong>非常自信地猜出它的最后 22 字节是什么</strong>；</li>
+<li>这 22 字节就是你已知的明文；</li>
+<li>再告诉 <code>bkcrack</code>：密文从哪开始对应这段明文（用 <code>-x</code> 指定偏移）；</li>
+<li><code>bkcrack</code> 利用这个明文片段恢复出 ZIP 解密的三个内部密钥（X, Y, Z）；</li>
+<li>一旦恢复了密钥，就可以<strong>直接解密加密的 <code>flag.zip</code> 文件</strong>，甚至还可以换密码！</li>
+</ul>
+<p>💡 所以：<strong>哪怕你不知道密码，只要你知道加密内容中一小段明文，就能反推出密钥！</strong></p>
+<hr>
+<h3 id="🔁-四、为什么能解密-attachment-zip-中的-flag-zip"><a href="#🔁-四、为什么能解密-attachment-zip-中的-flag-zip" class="headerlink" title="🔁 四、为什么能解密 attachment.zip 中的 flag.zip"></a>🔁 四、为什么能解密 <code>attachment.zip</code> 中的 <code>flag.zip</code></h3><p>这是因为：</p>
+<ol>
+<li><code>attachment.zip</code> 中的 <code>flag.zip</code> 是使用传统加密方式加密的；</li>
+<li><code>bkcrack</code> 并不关心加密内容在 <code>attachment.zip</code> 里还是单独文件；</li>
+<li>它只要：<ul>
+<li>加密后的 <code>flag.zip</code>（即 <code>-c</code> 参数指向密文）；</li>
+<li>还有一小段你<strong>知道确切内容的部分</strong>（已知明文）；</li>
+</ul>
+</li>
+<li>就能恢复出密钥并解密整份 <code>flag.zip</code>。</li>
+</ol>
+<h2 id="📦-bkcrack-用法（中文翻译）"><a href="#📦-bkcrack-用法（中文翻译）" class="headerlink" title="📦 bkcrack 用法（中文翻译）"></a>📦 <code>bkcrack</code> 用法（中文翻译）</h2><blockquote>
+<p>利用 Biham 和 Kocher 的已知明文攻击破解传统 ZIP 加密（ZipCrypto）。</p>
+</blockquote>
+<h4 id="一、获取内部密码表示（即恢复加密密钥）"><a href="#一、获取内部密码表示（即恢复加密密钥）" class="headerlink" title="一、获取内部密码表示（即恢复加密密钥）"></a>一、获取内部密码表示（即恢复加密密钥）</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-c, --cipher-file &lt;文件&gt;</code></td>
+<td>包含密文的 ZIP 条目或磁盘上的文件</td>
+</tr>
+<tr>
+<td><code>--cipher-index &lt;索引&gt;</code></td>
+<td>ZIP 中密文条目的索引号</td>
+</tr>
+<tr>
+<td><code>-C, --cipher-zip &lt;压缩包&gt;</code></td>
+<td>包含密文条目的 ZIP 压缩包</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-p, --plain-file &lt;文件&gt;</code></td>
+<td>包含明文的 ZIP 条目或磁盘上的文件</td>
+</tr>
+<tr>
+<td><code>--plain-index &lt;索引&gt;</code></td>
+<td>ZIP 中明文条目的索引号</td>
+</tr>
+<tr>
+<td><code>-P, --plain-zip &lt;压缩包&gt;</code></td>
+<td>包含明文条目的 ZIP 压缩包</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>其他相关参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-t, --truncate &lt;大小&gt;</code></td>
+<td>最多加载多少字节的明文</td>
+</tr>
+<tr>
+<td><code>-o, --offset &lt;偏移&gt;</code></td>
+<td>明文相对于密文的偏移量（不含加密头，可为负）</td>
+</tr>
+<tr>
+<td><code>-x, --extra &lt;偏移&gt; &lt;十六进制数据&gt;</code></td>
+<td>在指定偏移处增加额外明文（十六进制），可为负</td>
+</tr>
+<tr>
+<td><code>--ignore-check-byte</code></td>
+<td>不使用密文字节的校验位作为已知明文</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>高级选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--continue-attack &lt;检查点&gt;</code></td>
+<td>从上次攻击的中断点继续，适用于非穷举或中断的攻击</td>
+</tr>
+<tr>
+<td><code>--password &lt;密码&gt;</code></td>
+<td>从密码派生出内部密码值（高级用途，如反转 <code>--change-password</code> 的效果）</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="二、使用已知密钥执行操作"><a href="#二、使用已知密钥执行操作" class="headerlink" title="二、使用已知密钥执行操作"></a>二、使用已知密钥执行操作</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-k, --keys &lt;X&gt; &lt;Y&gt; &lt;Z&gt;</code></td>
+<td>使用 3 个十六进制整数形式的内部密码（需要搭配 <code>-d</code>、<code>-U</code>、<code>--change-keys</code> 或 <code>--bruteforce</code>）</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>解密相关</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-d, --decipher &lt;文件&gt;</code></td>
+</tr>
+<tr>
+<td><code>--keep-header</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>修改加密压缩包</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-U, --change-password &lt;压缩包&gt; &lt;新密码&gt;</code></td>
+</tr>
+<tr>
+<td><code>--change-keys &lt;压缩包&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="三、暴力破解密码"><a href="#三、暴力破解密码" class="headerlink" title="三、暴力破解密码"></a>三、暴力破解密码</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-b, --bruteforce &lt;字符集&gt;</code></td>
+<td>使用指定字符集生成并测试密码候选项以尝试破解密码（或等效密码）</td>
+</tr>
+</tbody></table>
+<p>支持的字符集快捷方式：</p>
+<table>
+<thead>
+<tr>
+<th>快捷方式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>?l</code></td>
+<td>小写字母：<code>abcdefghijklmnopqrstuvwxyz</code></td>
+</tr>
+<tr>
+<td><code>?u</code></td>
+<td>大写字母：<code>ABCDEFGHIJKLMNOPQRSTUVWXYZ</code></td>
+</tr>
+<tr>
+<td><code>?d</code></td>
+<td>数字：<code>0123456789</code></td>
+</tr>
+<tr>
+<td><code>?s</code></td>
+<td>特殊字符：<code>!&quot;#$%&amp;&#39;()*+,-./:;&lt;=&gt;?@[\]^_</code>{</td>
+</tr>
+<tr>
+<td><code>?a</code></td>
+<td>字母数字：等同于 <code>?l?u?d</code></td>
+</tr>
+<tr>
+<td><code>?p</code></td>
+<td>所有可打印 ASCII：等同于 <code>?l?u?d?s</code></td>
+</tr>
+<tr>
+<td><code>?b</code></td>
+<td>所有字节（0x00 - 0xFF）</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-l, --length [&lt;最小&gt;..&lt;最大&gt;]</code></td>
+<td>指定密码长度范围或具体长度（配合 <code>--bruteforce</code>）</td>
+</tr>
+<tr>
+<td><code>-r, --recover-password [&lt;长度&gt;] &lt;字符集&gt;</code></td>
+<td>快捷方式，同时指定密码长度和字符集，相当于 <code>--length</code> 与 <code>--bruteforce</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--continue-recovery &lt;检查点&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="四、其他选项"><a href="#四、其他选项" class="headerlink" title="四、其他选项"></a>四、其他选项</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-j, --jobs &lt;线程数&gt;</code></td>
+<td>设置并行线程数</td>
+</tr>
+<tr>
+<td><code>-e, --exhaustive</code></td>
+<td>完全穷举所有解（密钥或密码），而不是找到一个就停止</td>
+</tr>
+<tr>
+<td><code>-L, --list &lt;压缩包&gt;</code></td>
+<td>列出压缩包内文件并退出</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td>显示版本信息后退出</td>
+</tr>
+<tr>
+<td><code>-h, --help</code></td>
+<td>显示帮助信息后退出</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.qvq-ling.online">QvQ-Ling</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.qvq-ling.online/uncategorized/misc%EF%BC%9F/">https://www.qvq-ling.online/uncategorized/misc%EF%BC%9F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.qvq-ling.online" target="_blank">QvQ-Ling</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945678160.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/uncategorized/Python/" title="python"><img class="cover" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_eeecc3f16b9111ef049176a3e534ec78.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">python</div></div><div class="info-2"><div class="info-item-1">一、python常用快捷键：ctrl + &#x2F;  添加注释&#x2F;取消注释 ctrl + D 复制粘贴 ctrl + Z 撤销 ctrl + Y 还原&#x2F;删除 shift + enter 无视光标位置直接换行 ctrl + shift + 上下方向键 将代码上下移动一行 ctrl + alt +L 格式化代码 ctrl + shift +I 查看官方的帮助文档 ctrl + shift + f 查找 ctrl + alt + enter 向上换行 shift + tab 去掉缩进 符号\n 换行符 \t 制表符 \‘ 字符串内的引号 1、变量的类型识别变量类型 12type()print(type( ))  明确指定变量类型 1变量名:变量类型 = xxx      2、输入1input(&#x27;xxxxxx&#x27;)  输入的内容默认为str 字符串转换： 3、输出格式化 1234name = &#x27;QVQ&#x27;print(&#x27;My name is %s&#x27; % name)age = 8888print(&#x27;My...</div></div></div></a><a class="pagination-related" href="/uncategorized/%E5%AE%9E%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/" title="实用的代码和一些软件"><img class="cover" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945661870.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">实用的代码和一些软件</div></div><div class="info-2"><div class="info-item-1">一、python代码1、读取文件内容12345m = open(&quot;文件位置&quot;,&quot;rb&quot;).read()with oprn(&quot;file position&quot;,&#x27;rb&#x27;)as file:    m = file.read()print(  )  2、替换字符串中指定子字符串1234string.replace(old,new,count)#old --&gt; 想要替换旧子字符串#new --&gt; 替换成新的子字符串#count --&gt; 可选参数，指定替换的最大次数，若没有指定，默认会替换所有出现的old子字符串    二、yafuyafu可用于在RSA中暴力分解n 用法：在yafu文件夹内打开终端1yafu-x64 fator(n/n.txt)  示例：   3、netcat用于打开容器地址 用法：在netcat文件处打开终端输入容器地址12nc 192.168.1.1 80  暴力破解base编码 用法：在basecrack文件目录打开终端1python...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">QvQ-Ling</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E6%96%87%E4%BB%B6%E5%A4%B4%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">部分文件头：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PNG"><span class="toc-number">1.0.1.</span> <span class="toc-text">PNG:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JPEG%EF%BC%9A"><span class="toc-number">1.0.2.</span> <span class="toc-text">JPEG：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TGA%EF%BC%9A"><span class="toc-number">1.0.3.</span> <span class="toc-text">TGA：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GIF%EF%BC%9A"><span class="toc-number">1.0.4.</span> <span class="toc-text">GIF：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BMP%EF%BC%9A"><span class="toc-number">1.0.5.</span> <span class="toc-text">BMP：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TIFF%EF%BC%9A"><span class="toc-number">1.0.6.</span> <span class="toc-text">TIFF：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#zip%E4%BC%AA%E5%8A%A0%E5%AF%86"><span class="toc-number">2.</span> <span class="toc-text">zip伪加密</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E6%BA%90%E6%96%87%E4%BB%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%EF%BC%9A"><span class="toc-number">2.0.1.</span> <span class="toc-text">压缩源文件数据区：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E6%BA%90%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%8C%BA%EF%BC%9A"><span class="toc-number">2.0.2.</span> <span class="toc-text">压缩源文件目录区：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E6%BA%90%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9D%9F%E6%A0%87%E5%BF%97%EF%BC%9A"><span class="toc-number">2.0.3.</span> <span class="toc-text">压缩源文件目录结束标志：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#wireshark%E6%A3%80%E7%B4%A2%E8%AF%8D"><span class="toc-number">3.</span> <span class="toc-text">wireshark检索词</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number">3.1.</span> <span class="toc-text">例题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-BUUCTF-ACTF-RSA0"><span class="toc-number">3.1.1.</span> <span class="toc-text">[1]BUUCTF ACTF RSA0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-BUUCTF-zip%E4%BC%AA%E5%8A%A0%E5%AF%86"><span class="toc-number">3.1.2.</span> <span class="toc-text">[2]BUUCTF zip伪加密</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LSB"><span class="toc-number">3.2.</span> <span class="toc-text">LSB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-BUUCTF-LSB"><span class="toc-number">3.2.1.</span> <span class="toc-text">[1]BUUCTF LSB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%9F%EF%BC%9F%E6%9C%AA%E7%9F%A5"><span class="toc-number">3.3.</span> <span class="toc-text">？？未知</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98BUUCTFsnake"><span class="toc-number">3.3.1.</span> <span class="toc-text">例题BUUCTFsnake</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#base64%E4%BC%AA%E5%8A%A0%E5%AF%86"><span class="toc-number">4.</span> <span class="toc-text">base64伪加密</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%AF%86%E8%84%9A%E6%9C%AC-%E5%A4%A7%E4%BD%AC%E7%9A%84"><span class="toc-number">4.0.1.</span> <span class="toc-text">解密脚本(大佬的)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E9%9A%90%E5%86%99"><span class="toc-number">4.1.</span> <span class="toc-text">文件隐写</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BUUCTF-outguess"><span class="toc-number">4.1.1.</span> <span class="toc-text">BUUCTF outguess</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NSSCTFhuaji%EF%BC%9F"><span class="toc-number">4.1.2.</span> <span class="toc-text">NSSCTFhuaji？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-excel%E7%A0%B4%E8%A7%A3"><span class="toc-number">4.1.3.</span> <span class="toc-text">[2]excel破解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exe-base64%E8%BD%AC%E5%9B%BE%E7%89%87"><span class="toc-number">4.2.</span> <span class="toc-text">exe??base64转图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#n%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">4.2.1.</span> <span class="toc-text">n种解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B4%E5%90%88%E6%96%87%E4%BB%B6"><span class="toc-number">4.2.1.0.1.</span> <span class="toc-text">整合文件</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ISCC-%E4%B9%A6%E6%B3%95%E5%A4%A7%E5%B8%88"><span class="toc-number">4.3.</span> <span class="toc-text">ISCC 书法大师</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ZIP%E6%98%8E%E6%96%87%E6%94%BB%E5%87%BB"><span class="toc-number">4.4.</span> <span class="toc-text">ZIP明文攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%90-%E4%B8%80%E3%80%81ZIP-%E7%9A%84%E4%BC%A0%E7%BB%9F%E5%8A%A0%E5%AF%86%E6%9C%BA%E5%88%B6%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E5%BC%B1%E7%82%B9"><span class="toc-number">4.4.1.</span> <span class="toc-text">🔐 一、ZIP 的传统加密机制存在严重弱点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-%E4%BA%8C%E3%80%81%E5%B7%B2%E7%9F%A5%E6%98%8E%E6%96%87%E6%94%BB%E5%87%BB%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E8%B7%AF"><span class="toc-number">4.4.2.</span> <span class="toc-text">🔍 二、已知明文攻击的核心思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%A9-%E4%B8%89%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-ZIP-%E6%96%87%E4%BB%B6%E5%B0%BE%E9%83%A8%E5%B0%B1%E5%A4%9F%EF%BC%9F"><span class="toc-number">4.4.3.</span> <span class="toc-text">🧩 三、为什么用 ZIP 文件尾部就够？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%81-%E5%9B%9B%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%83%BD%E8%A7%A3%E5%AF%86-attachment-zip-%E4%B8%AD%E7%9A%84-flag-zip"><span class="toc-number">4.4.4.</span> <span class="toc-text">🔁 四、为什么能解密 attachment.zip 中的 flag.zip</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%A6-bkcrack-%E7%94%A8%E6%B3%95%EF%BC%88%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%EF%BC%89"><span class="toc-number">4.5.</span> <span class="toc-text">📦 bkcrack 用法（中文翻译）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%8E%B7%E5%8F%96%E5%86%85%E9%83%A8%E5%AF%86%E7%A0%81%E8%A1%A8%E7%A4%BA%EF%BC%88%E5%8D%B3%E6%81%A2%E5%A4%8D%E5%8A%A0%E5%AF%86%E5%AF%86%E9%92%A5%EF%BC%89"><span class="toc-number">4.5.0.1.</span> <span class="toc-text">一、获取内部密码表示（即恢复加密密钥）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%BF%E7%94%A8%E5%B7%B2%E7%9F%A5%E5%AF%86%E9%92%A5%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="toc-number">4.5.0.2.</span> <span class="toc-text">二、使用已知密钥执行操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81"><span class="toc-number">4.5.0.3.</span> <span class="toc-text">三、暴力破解密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96%E9%80%89%E9%A1%B9"><span class="toc-number">4.5.0.4.</span> <span class="toc-text">四、其他选项</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/hello-world/" title="Hello World"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/uncategorized/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-20T14:52:06.507Z" title="发表于 2025-06-20 22:52:06">2025-06-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BlogFix(MAD)"/></a><div class="content"><a class="title" href="/uncategorized/BlogFIx/" title="BlogFix(MAD)">BlogFix(MAD)</a><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/mmexport1731336259050.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盘古石复现"/></a><div class="content"><a class="title" href="/uncategorized/%E7%9B%98%E5%8F%A4%E7%9F%B3%E5%A4%8D%E7%8E%B0/" title="盘古石复现">盘古石复现</a><time datetime="2025-05-12T16:00:00.000Z" title="发表于 2025-05-13 00:00:00">2025-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_74079ed08c50d9d4097a0cd18bf2967c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="取证学习记录"/></a><div class="content"><a class="title" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="取证学习记录">取证学习记录</a><time datetime="2025-04-08T16:00:00.000Z" title="发表于 2025-04-09 00:00:00">2025-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945690620.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LCG解题记录"/></a><div class="content"><a class="title" href="/uncategorized/LCG%E8%A7%A3%E9%A2%98/" title="LCG解题记录">LCG解题记录</a><time datetime="2025-03-18T16:00:00.000Z" title="发表于 2025-03-19 00:00:00">2025-03-19</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By QvQ-Ling</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'RAF5WiARHber2ob8Mp5cCIjM-MdYXbMMI',
+      appKey: 'SlcDkXmqL4H9LPaBJlQoAYwO',
+      avatar: 'monsterid',
+      serverURLs: 'https://www.qvq-ling.online',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
