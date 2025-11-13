@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>取证复现 | QvQ-Ling</title><meta name="author" content="QvQ-Ling"><meta name="copyright" content="QvQ-Ling"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="总结**本地组策略编辑器 **win+R 打开 gpedit.msu  数证杯2024初赛计算机取证1.对计算机镜像进行分析，计算该镜像中 ESP 分区的 SM3 值后 8 位为？（答案格式：大写字母与数字组合，如：D23DDF44） EFI系统分区，即 EFI system partition，简写为 ESP。该分区在 Windows 操作系统下一般是不可见的。支持 EFI 模式的电脑需要从 E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="取证复现">
+<meta property="og:url" content="http://www.qvq-ling.github.io/uncategorized/%E5%8F%96%E8%AF%81%E5%A4%8D%E7%8E%B0/index.html">
+<meta property="og:site_name" content="QvQ-Ling">
+<meta property="og:description" content="总结**本地组策略编辑器 **win+R 打开 gpedit.msu  数证杯2024初赛计算机取证1.对计算机镜像进行分析，计算该镜像中 ESP 分区的 SM3 值后 8 位为？（答案格式：大写字母与数字组合，如：D23DDF44） EFI系统分区，即 EFI system partition，简写为 ESP。该分区在 Windows 操作系统下一般是不可见的。支持 EFI 模式的电脑需要从 E">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/OIP-C%20(1.jpg">
+<meta property="article:published_time" content="2025-10-28T11:55:39.547Z">
+<meta property="article:modified_time" content="2025-11-11T14:11:00.489Z">
+<meta property="article:author" content="QvQ-Ling">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/OIP-C%20(1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://www.qvq-ling.github.io/uncategorized/%E5%8F%96%E8%AF%81%E5%A4%8D%E7%8E%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '取证复现',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-color: #F5F5F5;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/OIP-C%20(1.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/Image_1731390906148.jpg" alt="Logo"><span class="site-name">QvQ-Ling</span></a><a class="nav-page-title" href="/"><span class="site-name">取证复现</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">取证复现</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-28T11:55:39.547Z" title="发表于 2025-10-28 19:55:39">2025-10-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-11T14:11:00.489Z" title="更新于 2025-11-11 22:11:00">2025-11-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>**本地组策略编辑器 **win+R 打开 gpedit.msu </p>
+<h1 id="数证杯2024初赛"><a href="#数证杯2024初赛" class="headerlink" title="数证杯2024初赛"></a>数证杯2024初赛</h1><h2 id="计算机取证"><a href="#计算机取证" class="headerlink" title="计算机取证"></a>计算机取证</h2><p><strong>1.对计算机镜像进行分析，计算该镜像中 ESP 分区的 SM3 值后 8 位为？（答案格式：大写字母与数字组合，如：D23DDF44）</strong></p>
+<p>EFI系统分区，即 EFI system partition，简写为 ESP。该分区在 Windows 操作系统下一般是不可见的。支持 EFI 模式的电脑需要从 ESP 启动系统，EFI 固件可从 ESP 加载 EFI 启动程序和应用程序。</p>
+<p>从文件处查看分区信息 在NO NAME处发现EFI</p>
+<p><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/image-20251028195809614.png" alt="image-20251028195809614"></p>
+<p>计算SM3值</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251028201317193.png" alt="image-20251028201317193"></p>
+<p>BDBE1073</p>
+<p><strong>2.对计算机镜像进行分析，该操作系统超管账户最后一次注销时间为？（时区为 UTC+08:00）（答案格式如：1970-01-01 00:00:00）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251028201026810.png" alt="image-20251028201026810"></p>
+<p>  记录由用户、进程或系统管理员启动的系统重启、关闭或注销事件。这个事件ID提供了详细的信息，包括触发重启的进程和触发者的用户信息。在审查黑客活动时，事件ID 1074 是一个关键事件，因为它能帮助我们了解系统重启的详细原因和源头。</p>
+<p>关机时间不等于注销时间</p>
+<p>2024-10-25 22:57:32</p>
+<p><strong>3.对计算机镜像进行分析，该操作系统超管账户有记录的登录次数为？（填写数字，答案格式如：1234）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251028201502601.png" alt="image-20251028201502601"></p>
+<p>24</p>
+<p><strong>4.对计算机镜像进行分析，该操作系统设置的账户密码最长存留期为多少天？（填写数字，答案格式如：1234）</strong></p>
+<p>win+R 打开 gpedit.msc 本地组策略编辑器</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251028222644230.png" alt="image-20251028222644230"></p>
+<p><strong>5.对计算机镜像进行分析，该操作系统安装的数据擦除软件的版本为？（答案格式：1.23）</strong></p>
+<p>在C盘找到一个叫eraser的软件查看版本号</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251029221600567.png" alt="image-20251029221600567"></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251029221633546.png" alt="image-20251029221633546"></p>
+<p>答案是5.86 不太理解两个看的不一样</p>
+<p><strong>6.对计算机镜像进行分析，该操作系统接入过一名称为 “Realtek USB Disk autorun USB Device” 的 USB 设备，其接入时分配的盘符为？（答案格式：A:）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251028202312903.png" alt="image-20251028202312903"></p>
+<p><strong>7.对计算机镜像进行分析，该操作系统无线网卡分配的默认网关地址为？（答案格式：127.0.0.1）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251029221112593.png" alt="image-20251029221112593"></p>
+<p>一、DHCP是什么？<br>DHCP是<strong>动态主机配置协议</strong>（Dynamic Host Configuration Protocol）的缩写。它是一种存在于应用层的网络管理协议。</p>
+<p>二、DHCP的作用？<br>在DHCP的帮助下，可以动态地给网络上的任何设备或节点<strong>分配一个互联网IP地址</strong>，使它们可以通过这个IP地址去通信。</p>
+<ol>
+<li>在没有DHCP服务的网络中<br>如果网络中没有DHCP服务，就需要手动设置IP地址、子网掩码、默认网关、DNS服务器，电脑、手机、平板电脑等设备每移动到一个地方，就要重新配置。</li>
+</ol>
+<p>让普通用户自己去手动配置这些网络参数的话，这其实就会很麻烦，因为普通人是不了解这些东西的，那就需要有一个东西来帮助配置网络参数，于是DHCP就诞生了，它的目的是为了实现自动设置IP地址、统一管理IP地址分配。</p>
+<ol start="2">
+<li>在有DHCP服务的网络中<br>有了DHCP，计算机只要连接到网络（WiFi 或者 有线网络），就可以进行 TCP&#x2F;IP 通信。也就是说，DHCP实现了即插即用。它不仅在IPv4中可以使用，在IPv6中也可以使用。</li>
+</ol>
+<p>三、DHCP的工作模式简介<br>DHCP 是一种 Client&#x2F;Server 模式的网络协议，由 DHCP Client 向 DHCP Server 提出配置申请，DHCP Server 从IP池化层中自动选择IP地址，并且一同返回其它相应的配置信息（子网掩码等）给 DHCP Client 。这里的 Client 和 Server 是应用程序，可以运行在电脑、服务器、路由器等设备上。</p>
+<p>四、DHCP的工作原理<br>DHCP在分配IP地址这件事上有两种方法：</p>
+<p>由DHCP服务器在选定的IP地址中自动选出一个进行分配<br>针对MAC地址分配一个固定的IP地址<br>这两种方法还可以并用。</p>
+<p><strong>8.对计算机镜像进行分析，该操作系统配置的连接 NAS 共享文件夹的 IP 地址为？（答案格式：127.0.0.1）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251029221351571.png" alt="image-20251029221351571"></p>
+<p><strong>9.对计算机镜像进行分析，写出 “吵群技巧.txt” 文件 SM3 值的后 8 位？（大写字母与数字组合，如：D23DDF44）</strong></p>
+<p>不知道为什么是乱码，都点开看内容才确定这个是技巧</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030145604514.png" alt="image-20251030145604514"></p>
+<p><strong>10.对计算机镜像进行分析，该操作系统通过 SSH 连接工具连接 CCTalk 测试环境的 SSH 端口为？（填写数字，答案格式如：1234）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251029224313753.png" alt="image-20251029224313753"></p>
+<p><strong>11.对计算机镜像进行分析，该操作系统通过 SSH 连接工具连接的 CCTalk 境外服务器是哪个运营商的？（填写汉字，答案格式：阿里云）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030150053777.png" alt="image-20251030150053777"></p>
+<p>18.55.213.79</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030153748542.png" alt="image-20251030153748542"></p>
+<p><strong>12.对计算机镜像进行分析，获取机主保存在本机的 U 盾序号的后 4 位数字为？（填写数字，答案格式如：1234）</strong></p>
+<p>发现名为U盾的图片，导出尝试分离文件出现一个rar压缩包</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030145115860.png" alt="image-20251030145115860"></p>
+<p><img src="H:\取证检材\2024数证\复现导出文件\2024数证\文件文档_20251030_144910\火眼-文件导出_U盾.jpeg.extracted\U.png" alt="U"></p>
+<p>6409</p>
+<p><strong>13.对计算机镜像进行分析，机主存储的某篇新闻报道 “小程序搅动资源争夺战” 的发表年份为？（答案格式：2024）</strong></p>
+<p><strong>14.对计算机镜像进行分析，该操作系统访问 “环球商贸” 的 IP 地址为？（答案格式：127.0.0.1）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030144511203.png" alt="image-20251030144511203"></p>
+<p>39.108.126.128</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030155327969.png" alt="image-20251030155327969"></p>
+<p><strong>15.对计算机镜像进行分析，“环球商贸” 服务器配置的登录密码为？（答案按照实际填写，字母存在大小写）</strong></p>
+<p><a target="_blank" rel="noopener" href="https://antontwelve.github.io/finalshellPasswordDecrypter/">antontwelve.github.io&#x2F;finalshellPasswordDecrypter&#x2F;</a></p>
+<p>在电脑中找到环球商贸发现在finnalshell中   </p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030160637651.png" alt="image-20251030160637651"></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030160825839.png" alt="image-20251030160825839"></p>
+<p>在文件中查找finalshell返回上级目录发现coon文件夹</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030160834325.png" alt="image-20251030160834325"></p>
+<p>使用上面网站进行解码HQSM#20231108@gwWeB</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030160852817.png" alt="image-20251030160852817"></p>
+<p><strong>16.对计算机镜像进行分析，机主安装的 PC-Server 服务环境的登录密码是？（答案按照实际填写，字母全小写）</strong></p>
+<p>jlb654321</p>
+<p>刚刚的文件夹中另一个就是</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030161156333.png" alt="image-20251030161156333"></p>
+<p><strong>17.对计算机镜像进行分析，机主搭建的宝塔面板的安全入口为？（答案格式：&#x2F;abc123）</strong></p>
+<p>发现隐藏磁盘</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030162731449.png" alt="image-20251030162731449"></p>
+<p>导出分析</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030202712621.png" alt="image-20251030202712621"></p>
+<p>c38b336a </p>
+<p><strong>18.对计算机镜像进行分析，机主搭建的宝塔面板的登录账号为？（答案格式：abcd）</strong></p>
+<p>igmxcdsa</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030202935424.png" alt="image-20251030202935424"></p>
+<p><strong>19.对计算机镜像进行分析，其搭建的宝塔面板的登录密码为？（按实际值填写）</strong></p>
+<p><strong>20.对计算机镜像进行分析，机主搭建的宝塔环境中绑定的宝塔账号是？（按实际值填写）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030203833710.png" alt="image-20251030203833710"></p>
+<p><strong>21.对计算机镜像进行分析，机主搭建的宝塔面板中 Mysql 环境的 root 密码为？（按实际值填写）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030204040583.png" alt="image-20251030204040583"></p>
+<p><strong>22.对计算机镜像进行分析，机主搭建的宝塔面板中 Mysql 环境连接的端口号为？（填写数字，答案格式如：1234）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030204147999.png" alt="image-20251030204147999"></p>
+<p><strong>23.接上题，“卡号分组” 表所在的数据库名为？（答案按照实际填写，字母全小写）</strong></p>
+<p>a_train2023</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030204259793.png" alt="image-20251030204259793"></p>
+<p><strong>24接上题，“孙华锦” 在 2020-07-01 10:49:07 时间节点的交易余额为？（答案格式：1234.56）</strong></p>
+<p>导出数据库到本地进行搜索6610.94</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030211819693.png" alt="image-20251030211819693"></p>
+<p><strong>25.对 U 盘镜像进行分析，其镜像中共有几个分区？（填写数字，答案格式如：1234）</strong></p>
+<p>2</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030214549610.png" alt="image-20251030214549610"></p>
+<p><strong>26.对 U 盘镜像进行分析，其中 FAT32 主分区的 FAT 表数量有几个？（请使用十进制数方式填写答案，答案格式：1234）</strong></p>
+<p><strong>27.对 U 盘镜像进行分析，其中 FAT32 主分区定义的每扇区字节数为？（请使用十进制数方式填写答案，答案格式：1234</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030220141503.png" alt="image-20251030220141503"></p>
+<h2 id="手机取证"><a href="#手机取证" class="headerlink" title="手机取证"></a>手机取证</h2><p><strong>1.对手机镜像进行分析，机主微信 ID 号为？（答案按照实际填写，字母全小写）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251030234445666.png" alt="image-20251030234445666"></p>
+<p><strong>2.对手机镜像进行分析，机主在 2023 年 12 月登录宝塔面板使用的验证码为？（填写数字，答案格式如：1234）</strong></p>
+<p>482762</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031173157947.png" alt="image-20251031173157947"></p>
+<p><strong>3.对手机镜像进行分析，小众即时通讯 “鸽哒” 应用程序的最后更新时间为？（答案格式如：1970-01-01 00:00:00）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031173522726.png" alt="image-20251031173522726"></p>
+<p><strong>4.对手机镜像进行分析，该手机中记录的最后一次开机时间。（答案格式如：1970-01-01 00:00:00）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031173637743.png" alt="image-20251031173637743"></p>
+<p><strong>5.对手机镜像进行分析，该手机中高德地图 APP 应用的登录 ID 为？（答案按照实际填写）</strong></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031173726319.png" alt="image-20251031173726319"></p>
+<p><strong>6.</strong></p>
+<p><strong>7.对手机镜像进行分析，其中 20220207-20230206 的微信账单文件的解压密码为？（答案格式：按实际值填写）</strong></p>
+<p>847905</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031175008738.png" alt="image-20251031175008738"></p>
+<p><strong>8.对手机镜像进行分析，机主在手机中存储的一张复古土砌矮墙照片的拍摄地为哪个城市？（答案格式：北京市）</strong></p>
+<p>景德镇市</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031175527186.png" alt="image-20251031175527186"></p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031175503568.png" alt="image-20251031175503568"></p>
+<p><strong>9.对手机镜像进行分析，通过 AI 合成的人脸照片中，有几张照片是通过本机当前安装的 AI 照片合成工具生成，并有对应记录的 ？（填写数字，答案格式如：1234）</strong></p>
+<p>找到ai换脸软件的包名</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031191456102.png" alt="image-20251031191456102"></p>
+<p>根据包名定位到这里共17条数据有图片</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031191816214.png" alt="image-20251031191816214"></p>
+<p><strong>10.对手机镜像进行分析，统计出通讯录号码归属地第二多的省份是？（答案格式：广东）</strong></p>
+<p><strong>导出文档统计第二多</strong></p>
+<p>福建</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031194736777.png" alt="image-20251031194736777"></p>
+<p>存档</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251028201803325.png" alt="image-20251028201803325"></p>
+<table>
+<thead>
+<tr>
+<th>Administrator</th>
+<th>jlb654321</th>
+<th>2024-10-25 21:56:51</th>
+</tr>
+</thead>
+</table>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251031174912248.png" alt="image-20251031174912248"></p>
+<h1 id="2023美亚杯资格赛"><a href="#2023美亚杯资格赛" class="headerlink" title="2023美亚杯资格赛"></a>2023美亚杯资格赛</h1><h2 id="手机取证-1"><a href="#手机取证-1" class="headerlink" title="手机取证"></a>手机取证</h2><h4 id="李大辉所用手机移动运营商公司的名称"><a href="#李大辉所用手机移动运营商公司的名称" class="headerlink" title="李大辉所用手机移动运营商公司的名称"></a>李大辉所用手机移动运营商公司的名称</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111152823570.png" alt="image-20251111152823570"></p>
+<p>MOBILE DUCK</p>
+<h4 id="李大辉的手机安装了什么即时通讯软件"><a href="#李大辉的手机安装了什么即时通讯软件" class="headerlink" title="李大辉的手机安装了什么即时通讯软件"></a>李大辉的手机安装了什么即时通讯软件</h4><h4 id="李大辉的手机是什么时间成功登入WhatsApp"><a href="#李大辉的手机是什么时间成功登入WhatsApp" class="headerlink" title="李大辉的手机是什么时间成功登入WhatsApp?"></a>李大辉的手机是什么时间成功登入WhatsApp?</h4><h4 id="李大辉登入WHATSAPP时的认证短码是什么"><a href="#李大辉登入WHATSAPP时的认证短码是什么" class="headerlink" title="李大辉登入WHATSAPP时的认证短码是什么?"></a>李大辉登入WHATSAPP时的认证短码是什么?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111153210037.png" alt="image-20251111153210037"></p>
+<h4 id="6-李大辉到美丽好化妆品公司的入职时间是何时？"><a href="#6-李大辉到美丽好化妆品公司的入职时间是何时？" class="headerlink" title="6.李大辉到美丽好化妆品公司的入职时间是何时？"></a>6.李大辉到美丽好化妆品公司的入职时间是何时？</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111154309382.png" alt="image-20251111154309382"></p>
+<p>2017-705-25</p>
+<h4 id="7-李大辉曾于什么时间使用了图像编辑软件"><a href="#7-李大辉曾于什么时间使用了图像编辑软件" class="headerlink" title="7.李大辉曾于什么时间使用了图像编辑软件?"></a>7.李大辉曾于什么时间使用了图像编辑软件?</h4><p>图片按照顺序发现一张</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111161612013.png" alt="image-20251111161612013"></p>
+<h4 id="29-从文件“Car-rtfd”中删除了哪个文件？"><a href="#29-从文件“Car-rtfd”中删除了哪个文件？" class="headerlink" title="29.从文件“Car.rtfd”中删除了哪个文件？"></a>29.从文件“Car.rtfd”中删除了哪个文件？</h4><p><code>DocumentRevisions-V100</code> 是 Apple 在 OSX Lion 中引入的内部版本控制系统. 它基本上每次保存时都会保存文件的历史副本, 类似 <code>git</code>. 里面有两个 <code>.rtfd</code> 文件夹, 其中有一个和目前的 <code>Car.rtfd</code> 不同, 多出来 <code>yeah.jpg</code>.</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111192326787.png" alt="image-20251111192326787"></p>
+<h4 id="32-Elvis-Chui-总共登入过该计算机多少次"><a href="#32-Elvis-Chui-总共登入过该计算机多少次" class="headerlink" title="32.Elvis Chui 总共登入过该计算机多少次?"></a>32.Elvis Chui 总共登入过该计算机多少次?</h4><p>11</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111201553779.png" alt="image-20251111201553779"></p>
+<h4 id="33-该计算机的操作系统是在哪一个时区"><a href="#33-该计算机的操作系统是在哪一个时区" class="headerlink" title="33.该计算机的操作系统是在哪一个时区?"></a>33.该计算机的操作系统是在哪一个时区?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111201646339.png" alt="image-20251111201646339"></p>
+<h4 id="34-该计算机的操作系统于何时安装-以计算机系统时区回答"><a href="#34-该计算机的操作系统于何时安装-以计算机系统时区回答" class="headerlink" title="34.该计算机的操作系统于何时安装? (以计算机系统时区回答)"></a>34.该计算机的操作系统于何时安装? (以计算机系统时区回答)</h4><p>2023-07-13 11:18:14 +0800 CST见上图</p>
+<h4 id="35-哪-几-个程序会于操作系统启动时自动执行"><a href="#35-哪-几-个程序会于操作系统启动时自动执行" class="headerlink" title="35.哪(几)个程序会于操作系统启动时自动执行?"></a>35.哪(几)个程序会于操作系统启动时自动执行?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111202351370.png" alt="image-20251111202351370"></p>
+<h4 id="36-该计算机内安装了以下哪一个程序"><a href="#36-该计算机内安装了以下哪一个程序" class="headerlink" title="36.该计算机内安装了以下哪一个程序?"></a>36.该计算机内安装了以下哪一个程序?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111202550116.png" alt="image-20251111202550116"></p>
+<h4 id="37-计算机内的OneDrive程序版本是什么"><a href="#37-计算机内的OneDrive程序版本是什么" class="headerlink" title="37.计算机内的OneDrive程序版本是什么?"></a>37.计算机内的OneDrive程序版本是什么?</h4><p>21.220.1024.0005</p>
+<p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111202726099.png" alt="image-20251111202726099"></p>
+<h4 id="38-计算机有一个正在连接的网络接口，该接口连接DHCP服务器的IP地址是多少"><a href="#38-计算机有一个正在连接的网络接口，该接口连接DHCP服务器的IP地址是多少" class="headerlink" title="38.计算机有一个正在连接的网络接口，该接口连接DHCP服务器的IP地址是多少?"></a>38.计算机有一个正在连接的网络接口，该接口连接DHCP服务器的IP地址是多少?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111204335109.png" alt="image-20251111204335109"></p>
+<h4 id="39-该计算机何时连接过一只U盘-以计算机系统时区回答"><a href="#39-该计算机何时连接过一只U盘-以计算机系统时区回答" class="headerlink" title="39.该计算机何时连接过一只U盘? (以计算机系统时区回答)"></a>39.该计算机何时连接过一只U盘? (以计算机系统时区回答)</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111210503666.png" alt="image-20251111210503666"></p>
+<h4 id="40-Elvis-Chui-将哪几个文本文件放在回收站中"><a href="#40-Elvis-Chui-将哪几个文本文件放在回收站中" class="headerlink" title="40.Elvis Chui 将哪几个文本文件放在回收站中?"></a>40.Elvis Chui 将哪几个文本文件放在回收站中?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111210602673.png" alt="image-20251111210602673"></p>
+<h4 id="41-Elvis-Chui在什么时间删除了第一个文本文件-以计算机系统时区回答"><a href="#41-Elvis-Chui在什么时间删除了第一个文本文件-以计算机系统时区回答" class="headerlink" title="41.Elvis Chui在什么时间删除了第一个文本文件? (以计算机系统时区回答)"></a>41.Elvis Chui在什么时间删除了第一个文本文件? (以计算机系统时区回答)</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111210813365.png" alt="image-20251111210813365"></p>
+<h4 id="42-Elvis-Chui删除的第一个文本文件的文件名是什么"><a href="#42-Elvis-Chui删除的第一个文本文件的文件名是什么" class="headerlink" title="42.Elvis Chui删除的第一个文本文件的文件名是什么?"></a>42.Elvis Chui删除的第一个文本文件的文件名是什么?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111210918849.png" alt="image-20251111210918849"></p>
+<h4 id="43-Elvis-Chui删除的第一个文本文件在什么时间创建-以计算机系统时区回答"><a href="#43-Elvis-Chui删除的第一个文本文件在什么时间创建-以计算机系统时区回答" class="headerlink" title="43.Elvis Chui删除的第一个文本文件在什么时间创建? (以计算机系统时区回答)"></a>43.Elvis Chui删除的第一个文本文件在什么时间创建? (以计算机系统时区回答)</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111211003169.png" alt="image-20251111211003169"></p>
+<h4 id="44-Elvis-Chui计划于2023年7月15日20点5分有什么活动"><a href="#44-Elvis-Chui计划于2023年7月15日20点5分有什么活动" class="headerlink" title="44.Elvis Chui计划于2023年7月15日20点5分有什么活动?"></a>44.Elvis Chui计划于2023年7月15日20点5分有什么活动?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111211415864.png" alt="image-20251111211415864"></p>
+<h4 id="45该计算机执行STEAM-EXE总共多少次"><a href="#45该计算机执行STEAM-EXE总共多少次" class="headerlink" title="45该计算机执行STEAM.EXE总共多少次?"></a>45该计算机执行STEAM.EXE总共多少次?</h4><p><img src="C:\Users\Ling\AppData\Roaming\Typora\typora-user-images\image-20251111211540690.png" alt="image-20251111211540690"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://www.qvq-ling.github.io">QvQ-Ling</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://www.qvq-ling.github.io/uncategorized/%E5%8F%96%E8%AF%81%E5%A4%8D%E7%8E%B0/">http://www.qvq-ling.github.io/uncategorized/%E5%8F%96%E8%AF%81%E5%A4%8D%E7%8E%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://www.qvq-ling.github.io" target="_blank">QvQ-Ling</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/OIP-C%20(1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/uncategorized/newstar2025/" title=""><img class="cover" src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945690620.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">misc我不要革命失败WinDbg打开 运行!analyze -v  根据flag提示  崩溃类型👆  故障进程👆 1flag&#123;CRITICAL_PROCESS_DIED_svchost.exe&#125;  Fence拿到图片放入随波逐流检测到隐藏文件 binwalk分离得到压缩包 图片为w型栅栏密码+base64解码，发现不对 图片CRC校验错误，修改图片高度发现base64换表  使用脚本解码，获得压缩包密码  MISC城邦-压缩术前有文字，所以搜索很有用track1  零宽隐写得到地一串字符  ZmxhZ3t5b3Vf flag{you_ track2   第二个文件是brainfuck解马获得key 1brainfuckisgooooood  根据word 提示 将文件进行snow解码获得· track3词频统计  得到最后一部分flag   cH@1LenG3s} 拼接flag  flag{yo0V3RC4MEI_cH@1LenG3s} [Misc]OSINT-天空belong B-7198 航班跟踪和历史数据 2025年 08月 17日 (TNA...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/IMG_20240921_205509.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">QvQ-Ling</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E8%AF%81%E6%9D%AF2024%E5%88%9D%E8%B5%9B"><span class="toc-number">2.</span> <span class="toc-text">数证杯2024初赛</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%96%E8%AF%81"><span class="toc-number">2.1.</span> <span class="toc-text">计算机取证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%96%E8%AF%81"><span class="toc-number">2.2.</span> <span class="toc-text">手机取证</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2023%E7%BE%8E%E4%BA%9A%E6%9D%AF%E8%B5%84%E6%A0%BC%E8%B5%9B"><span class="toc-number">3.</span> <span class="toc-text">2023美亚杯资格赛</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%96%E8%AF%81-1"><span class="toc-number">3.1.</span> <span class="toc-text">手机取证</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%8E%E5%A4%A7%E8%BE%89%E6%89%80%E7%94%A8%E6%89%8B%E6%9C%BA%E7%A7%BB%E5%8A%A8%E8%BF%90%E8%90%A5%E5%95%86%E5%85%AC%E5%8F%B8%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="toc-number">3.1.0.1.</span> <span class="toc-text">李大辉所用手机移动运营商公司的名称</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%8E%E5%A4%A7%E8%BE%89%E7%9A%84%E6%89%8B%E6%9C%BA%E5%AE%89%E8%A3%85%E4%BA%86%E4%BB%80%E4%B9%88%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.1.0.2.</span> <span class="toc-text">李大辉的手机安装了什么即时通讯软件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%8E%E5%A4%A7%E8%BE%89%E7%9A%84%E6%89%8B%E6%9C%BA%E6%98%AF%E4%BB%80%E4%B9%88%E6%97%B6%E9%97%B4%E6%88%90%E5%8A%9F%E7%99%BB%E5%85%A5WhatsApp"><span class="toc-number">3.1.0.3.</span> <span class="toc-text">李大辉的手机是什么时间成功登入WhatsApp?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%8E%E5%A4%A7%E8%BE%89%E7%99%BB%E5%85%A5WHATSAPP%E6%97%B6%E7%9A%84%E8%AE%A4%E8%AF%81%E7%9F%AD%E7%A0%81%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">3.1.0.4.</span> <span class="toc-text">李大辉登入WHATSAPP时的认证短码是什么?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E6%9D%8E%E5%A4%A7%E8%BE%89%E5%88%B0%E7%BE%8E%E4%B8%BD%E5%A5%BD%E5%8C%96%E5%A6%86%E5%93%81%E5%85%AC%E5%8F%B8%E7%9A%84%E5%85%A5%E8%81%8C%E6%97%B6%E9%97%B4%E6%98%AF%E4%BD%95%E6%97%B6%EF%BC%9F"><span class="toc-number">3.1.0.5.</span> <span class="toc-text">6.李大辉到美丽好化妆品公司的入职时间是何时？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E6%9D%8E%E5%A4%A7%E8%BE%89%E6%9B%BE%E4%BA%8E%E4%BB%80%E4%B9%88%E6%97%B6%E9%97%B4%E4%BD%BF%E7%94%A8%E4%BA%86%E5%9B%BE%E5%83%8F%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.1.0.6.</span> <span class="toc-text">7.李大辉曾于什么时间使用了图像编辑软件?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E4%BB%8E%E6%96%87%E4%BB%B6%E2%80%9CCar-rtfd%E2%80%9D%E4%B8%AD%E5%88%A0%E9%99%A4%E4%BA%86%E5%93%AA%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="toc-number">3.1.0.7.</span> <span class="toc-text">29.从文件“Car.rtfd”中删除了哪个文件？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-Elvis-Chui-%E6%80%BB%E5%85%B1%E7%99%BB%E5%85%A5%E8%BF%87%E8%AF%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A4%9A%E5%B0%91%E6%AC%A1"><span class="toc-number">3.1.0.8.</span> <span class="toc-text">32.Elvis Chui 总共登入过该计算机多少次?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-%E8%AF%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%98%AF%E5%9C%A8%E5%93%AA%E4%B8%80%E4%B8%AA%E6%97%B6%E5%8C%BA"><span class="toc-number">3.1.0.9.</span> <span class="toc-text">33.该计算机的操作系统是在哪一个时区?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-%E8%AF%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BA%8E%E4%BD%95%E6%97%B6%E5%AE%89%E8%A3%85-%E4%BB%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%97%B6%E5%8C%BA%E5%9B%9E%E7%AD%94"><span class="toc-number">3.1.0.10.</span> <span class="toc-text">34.该计算机的操作系统于何时安装? (以计算机系统时区回答)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-%E5%93%AA-%E5%87%A0-%E4%B8%AA%E7%A8%8B%E5%BA%8F%E4%BC%9A%E4%BA%8E%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%97%B6%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C"><span class="toc-number">3.1.0.11.</span> <span class="toc-text">35.哪(几)个程序会于操作系统启动时自动执行?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-%E8%AF%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%86%85%E5%AE%89%E8%A3%85%E4%BA%86%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.1.0.12.</span> <span class="toc-text">36.该计算机内安装了以下哪一个程序?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#37-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%86%85%E7%9A%84OneDrive%E7%A8%8B%E5%BA%8F%E7%89%88%E6%9C%AC%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">3.1.0.13.</span> <span class="toc-text">37.计算机内的OneDrive程序版本是什么?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#38-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%89%E4%B8%80%E4%B8%AA%E6%AD%A3%E5%9C%A8%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3%EF%BC%8C%E8%AF%A5%E6%8E%A5%E5%8F%A3%E8%BF%9E%E6%8E%A5DHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%98%AF%E5%A4%9A%E5%B0%91"><span class="toc-number">3.1.0.14.</span> <span class="toc-text">38.计算机有一个正在连接的网络接口，该接口连接DHCP服务器的IP地址是多少?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#39-%E8%AF%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%95%E6%97%B6%E8%BF%9E%E6%8E%A5%E8%BF%87%E4%B8%80%E5%8F%AAU%E7%9B%98-%E4%BB%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%97%B6%E5%8C%BA%E5%9B%9E%E7%AD%94"><span class="toc-number">3.1.0.15.</span> <span class="toc-text">39.该计算机何时连接过一只U盘? (以计算机系统时区回答)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#40-Elvis-Chui-%E5%B0%86%E5%93%AA%E5%87%A0%E4%B8%AA%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E6%94%BE%E5%9C%A8%E5%9B%9E%E6%94%B6%E7%AB%99%E4%B8%AD"><span class="toc-number">3.1.0.16.</span> <span class="toc-text">40.Elvis Chui 将哪几个文本文件放在回收站中?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#41-Elvis-Chui%E5%9C%A8%E4%BB%80%E4%B9%88%E6%97%B6%E9%97%B4%E5%88%A0%E9%99%A4%E4%BA%86%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6-%E4%BB%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%97%B6%E5%8C%BA%E5%9B%9E%E7%AD%94"><span class="toc-number">3.1.0.17.</span> <span class="toc-text">41.Elvis Chui在什么时间删除了第一个文本文件? (以计算机系统时区回答)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#42-Elvis-Chui%E5%88%A0%E9%99%A4%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">3.1.0.18.</span> <span class="toc-text">42.Elvis Chui删除的第一个文本文件的文件名是什么?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#43-Elvis-Chui%E5%88%A0%E9%99%A4%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%9C%A8%E4%BB%80%E4%B9%88%E6%97%B6%E9%97%B4%E5%88%9B%E5%BB%BA-%E4%BB%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%97%B6%E5%8C%BA%E5%9B%9E%E7%AD%94"><span class="toc-number">3.1.0.19.</span> <span class="toc-text">43.Elvis Chui删除的第一个文本文件在什么时间创建? (以计算机系统时区回答)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#44-Elvis-Chui%E8%AE%A1%E5%88%92%E4%BA%8E2023%E5%B9%B47%E6%9C%8815%E6%97%A520%E7%82%B95%E5%88%86%E6%9C%89%E4%BB%80%E4%B9%88%E6%B4%BB%E5%8A%A8"><span class="toc-number">3.1.0.20.</span> <span class="toc-text">44.Elvis Chui计划于2023年7月15日20点5分有什么活动?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#45%E8%AF%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%89%A7%E8%A1%8CSTEAM-EXE%E6%80%BB%E5%85%B1%E5%A4%9A%E5%B0%91%E6%AC%A1"><span class="toc-number">3.1.0.21.</span> <span class="toc-text">45该计算机执行STEAM.EXE总共多少次?</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%A4%8D%E7%8E%B0/" title="取证复现"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/OIP-C%20(1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="取证复现"/></a><div class="content"><a class="title" href="/uncategorized/%E5%8F%96%E8%AF%81%E5%A4%8D%E7%8E%B0/" title="取证复现">取证复现</a><time datetime="2025-10-28T11:55:39.547Z" title="发表于 2025-10-28 19:55:39">2025-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/newstar2025/" title="无标题"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945690620.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无标题"/></a><div class="content"><a class="title" href="/uncategorized/newstar2025/" title="无标题">无标题</a><time datetime="2025-09-28T16:00:00.000Z" title="发表于 2025-09-29 00:00:00">2025-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/Web%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="Web刷题记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945678160.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Web刷题记录"/></a><div class="content"><a class="title" href="/uncategorized/Web%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="Web刷题记录">Web刷题记录</a><time datetime="2025-08-25T16:00:00.000Z" title="发表于 2025-08-26 00:00:00">2025-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/%E8%8F%9C%E7%8B%97%E6%9D%AF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="菜狗杯刷题记录"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/share_6582fcec9b3eac6e47478fa2e4099941.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="菜狗杯刷题记录"/></a><div class="content"><a class="title" href="/uncategorized/%E8%8F%9C%E7%8B%97%E6%9D%AF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="菜狗杯刷题记录">菜狗杯刷题记录</a><time datetime="2025-08-13T16:00:00.000Z" title="发表于 2025-08-14 00:00:00">2025-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/Tools/" title="Tools_WIndows"><img src="https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/qq_pic_merged_1731945706915.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tools_WIndows"/></a><div class="content"><a class="title" href="/uncategorized/Tools/" title="Tools_WIndows">Tools_WIndows</a><time datetime="2025-08-08T16:00:00.000Z" title="发表于 2025-08-09 00:00:00">2025-08-09</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://lingc-1331223348.cos.ap-chengdu.myqcloud.com/d1ce098342204908174c743577640017.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By QvQ-Ling</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'RAF5WiARHber2ob8Mp5cCIjM-MdYXbMMI',
+      appKey: 'SlcDkXmqL4H9LPaBJlQoAYwO',
+      avatar: 'monsterid',
+      serverURLs: 'http://www.qvq-ling.github.io',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
